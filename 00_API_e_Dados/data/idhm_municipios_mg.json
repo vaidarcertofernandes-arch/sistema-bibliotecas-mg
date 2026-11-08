@@ -1,0 +1,3414 @@
+{
+  "3100104": {
+    "nome": "Abadia dos Dourados",
+    "idhm": 0.689
+  },
+  "3100203": {
+    "nome": "Abaeté",
+    "idhm": 0.698
+  },
+  "3100302": {
+    "nome": "Abre Campo",
+    "idhm": 0.654
+  },
+  "3100401": {
+    "nome": "Acaiaca",
+    "idhm": 0.63
+  },
+  "3100807": {
+    "nome": "Aguanil",
+    "idhm": 0.663
+  },
+  "3101102": {
+    "nome": "Aimorés",
+    "idhm": 0.684
+  },
+  "3101201": {
+    "nome": "Aiuruoca",
+    "idhm": 0.668
+  },
+  "3101300": {
+    "nome": "Alagoa",
+    "idhm": 0.649
+  },
+  "3101409": {
+    "nome": "Albertina",
+    "idhm": 0.673
+  },
+  "3101607": {
+    "nome": "Alfenas",
+    "idhm": 0.761
+  },
+  "3101631": {
+    "nome": "Alfredo Vasconcelos",
+    "idhm": 0.675
+  },
+  "3101706": {
+    "nome": "Almenara",
+    "idhm": 0.642
+  },
+  "3101805": {
+    "nome": "Alpercata",
+    "idhm": 0.646
+  },
+  "3101904": {
+    "nome": "Alpinópolis",
+    "idhm": 0.725
+  },
+  "3102001": {
+    "nome": "Alterosa",
+    "idhm": 0.668
+  },
+  "3102050": {
+    "nome": "Alto Caparaó",
+    "idhm": 0.661
+  },
+  "3153509": {
+    "nome": "Alto Jequitibá",
+    "idhm": 0.66
+  },
+  "3102100": {
+    "nome": "Alto Rio Doce",
+    "idhm": 0.62
+  },
+  "3102209": {
+    "nome": "Alvarenga",
+    "idhm": 0.592
+  },
+  "3102308": {
+    "nome": "Alvinópolis",
+    "idhm": 0.676
+  },
+  "3102407": {
+    "nome": "Alvorada de Minas",
+    "idhm": 0.572
+  },
+  "3101508": {
+    "nome": "Além Paraíba",
+    "idhm": 0.726
+  },
+  "3102506": {
+    "nome": "Amparo do Serra",
+    "idhm": 0.641
+  },
+  "3102605": {
+    "nome": "Andradas",
+    "idhm": 0.734
+  },
+  "3102803": {
+    "nome": "Andrelândia",
+    "idhm": 0.7
+  },
+  "3102852": {
+    "nome": "Angelândia",
+    "idhm": 0.597
+  },
+  "3102902": {
+    "nome": "Antônio Carlos",
+    "idhm": 0.683
+  },
+  "3103009": {
+    "nome": "Antônio Dias",
+    "idhm": 0.645
+  },
+  "3103108": {
+    "nome": "Antônio Prado de Minas",
+    "idhm": 0.684
+  },
+  "3103306": {
+    "nome": "Aracitaba",
+    "idhm": 0.661
+  },
+  "3103504": {
+    "nome": "Araguari",
+    "idhm": 0.773
+  },
+  "3103603": {
+    "nome": "Arantina",
+    "idhm": 0.697
+  },
+  "3103702": {
+    "nome": "Araponga",
+    "idhm": 0.536
+  },
+  "3103751": {
+    "nome": "Araporã",
+    "idhm": 0.708
+  },
+  "3103801": {
+    "nome": "Arapuá",
+    "idhm": 0.724
+  },
+  "3104007": {
+    "nome": "Araxá",
+    "idhm": 0.772
+  },
+  "3103207": {
+    "nome": "Araçaí",
+    "idhm": 0.695
+  },
+  "3103405": {
+    "nome": "Araçuaí",
+    "idhm": 0.663
+  },
+  "3103900": {
+    "nome": "Araújos",
+    "idhm": 0.698
+  },
+  "3104106": {
+    "nome": "Arceburgo",
+    "idhm": 0.683
+  },
+  "3104205": {
+    "nome": "Arcos",
+    "idhm": 0.749
+  },
+  "3104304": {
+    "nome": "Areado",
+    "idhm": 0.727
+  },
+  "3104403": {
+    "nome": "Argirita",
+    "idhm": 0.643
+  },
+  "3104452": {
+    "nome": "Aricanduva",
+    "idhm": 0.582
+  },
+  "3104502": {
+    "nome": "Arinos",
+    "idhm": 0.656
+  },
+  "3104601": {
+    "nome": "Astolfo Dutra",
+    "idhm": 0.694
+  },
+  "3104700": {
+    "nome": "Ataléia",
+    "idhm": 0.588
+  },
+  "3104809": {
+    "nome": "Augusto de Lima",
+    "idhm": 0.656
+  },
+  "3100500": {
+    "nome": "Açucena",
+    "idhm": 0.61
+  },
+  "3104908": {
+    "nome": "Baependi",
+    "idhm": 0.681
+  },
+  "3105004": {
+    "nome": "Baldim",
+    "idhm": 0.671
+  },
+  "3105103": {
+    "nome": "Bambuí",
+    "idhm": 0.741
+  },
+  "3105202": {
+    "nome": "Bandeira",
+    "idhm": 0.599
+  },
+  "3105301": {
+    "nome": "Bandeira do Sul",
+    "idhm": 0.692
+  },
+  "3105608": {
+    "nome": "Barbacena",
+    "idhm": 0.769
+  },
+  "3105707": {
+    "nome": "Barra Longa",
+    "idhm": 0.624
+  },
+  "3105905": {
+    "nome": "Barroso",
+    "idhm": 0.734
+  },
+  "3105400": {
+    "nome": "Barão de Cocais",
+    "idhm": 0.722
+  },
+  "3105509": {
+    "nome": "Barão de Monte Alto",
+    "idhm": 0.649
+  },
+  "3106002": {
+    "nome": "Bela Vista de Minas",
+    "idhm": 0.674
+  },
+  "3106101": {
+    "nome": "Belmiro Braga",
+    "idhm": 0.66
+  },
+  "3106200": {
+    "nome": "Belo Horizonte",
+    "idhm": 0.81
+  },
+  "3106309": {
+    "nome": "Belo Oriente",
+    "idhm": 0.686
+  },
+  "3106408": {
+    "nome": "Belo Vale",
+    "idhm": 0.655
+  },
+  "3106507": {
+    "nome": "Berilo",
+    "idhm": 0.628
+  },
+  "3106655": {
+    "nome": "Berizal",
+    "idhm": 0.604
+  },
+  "3106606": {
+    "nome": "Bertópolis",
+    "idhm": 0.594
+  },
+  "3106705": {
+    "nome": "Betim",
+    "idhm": 0.749
+  },
+  "3106804": {
+    "nome": "Bias Fortes",
+    "idhm": 0.62
+  },
+  "3106903": {
+    "nome": "Bicas",
+    "idhm": 0.744
+  },
+  "3107000": {
+    "nome": "Biquinhas",
+    "idhm": 0.688
+  },
+  "3107109": {
+    "nome": "Boa Esperança",
+    "idhm": 0.704
+  },
+  "3107208": {
+    "nome": "Bocaina de Minas",
+    "idhm": 0.645
+  },
+  "3107307": {
+    "nome": "Bocaiúva",
+    "idhm": 0.7
+  },
+  "3107406": {
+    "nome": "Bom Despacho",
+    "idhm": 0.75
+  },
+  "3107505": {
+    "nome": "Bom Jardim de Minas",
+    "idhm": 0.673
+  },
+  "3107604": {
+    "nome": "Bom Jesus da Penha",
+    "idhm": 0.735
+  },
+  "3107703": {
+    "nome": "Bom Jesus do Amparo",
+    "idhm": 0.683
+  },
+  "3107802": {
+    "nome": "Bom Jesus do Galho",
+    "idhm": 0.623
+  },
+  "3107901": {
+    "nome": "Bom Repouso",
+    "idhm": 0.653
+  },
+  "3108008": {
+    "nome": "Bom Sucesso",
+    "idhm": 0.692
+  },
+  "3108107": {
+    "nome": "Bonfim",
+    "idhm": 0.637
+  },
+  "3108206": {
+    "nome": "Bonfinópolis de Minas",
+    "idhm": 0.678
+  },
+  "3108255": {
+    "nome": "Bonito de Minas",
+    "idhm": 0.537
+  },
+  "3108305": {
+    "nome": "Borda da Mata",
+    "idhm": 0.73
+  },
+  "3108404": {
+    "nome": "Botelhos",
+    "idhm": 0.702
+  },
+  "3108503": {
+    "nome": "Botumirim",
+    "idhm": 0.602
+  },
+  "3108552": {
+    "nome": "Brasilândia de Minas",
+    "idhm": 0.674
+  },
+  "3108602": {
+    "nome": "Brasília de Minas",
+    "idhm": 0.656
+  },
+  "3108909": {
+    "nome": "Brasópolis",
+    "idhm": 0.692
+  },
+  "3108800": {
+    "nome": "Braúnas",
+    "idhm": 0.624
+  },
+  "3109006": {
+    "nome": "Brumadinho",
+    "idhm": 0.747
+  },
+  "3108701": {
+    "nome": "Brás Pires",
+    "idhm": 0.625
+  },
+  "3109105": {
+    "nome": "Bueno Brandão",
+    "idhm": 0.658
+  },
+  "3109204": {
+    "nome": "Buenópolis",
+    "idhm": 0.669
+  },
+  "3109253": {
+    "nome": "Bugre",
+    "idhm": 0.627
+  },
+  "3109303": {
+    "nome": "Buritis",
+    "idhm": 0.672
+  },
+  "3109402": {
+    "nome": "Buritizeiro",
+    "idhm": 0.624
+  },
+  "3109451": {
+    "nome": "Cabeceira Grande",
+    "idhm": 0.648
+  },
+  "3109501": {
+    "nome": "Cabo Verde",
+    "idhm": 0.674
+  },
+  "3109808": {
+    "nome": "Cachoeira Dourada",
+    "idhm": 0.726
+  },
+  "3109600": {
+    "nome": "Cachoeira da Prata",
+    "idhm": 0.741
+  },
+  "3109709": {
+    "nome": "Cachoeira de Minas",
+    "idhm": 0.706
+  },
+  "3102704": {
+    "nome": "Cachoeira de Pajeú",
+    "idhm": 0.578
+  },
+  "3109907": {
+    "nome": "Caetanópolis",
+    "idhm": 0.706
+  },
+  "3110004": {
+    "nome": "Caeté",
+    "idhm": 0.728
+  },
+  "3110103": {
+    "nome": "Caiana",
+    "idhm": 0.633
+  },
+  "3110202": {
+    "nome": "Cajuri",
+    "idhm": 0.617
+  },
+  "3110301": {
+    "nome": "Caldas",
+    "idhm": 0.687
+  },
+  "3110400": {
+    "nome": "Camacho",
+    "idhm": 0.69
+  },
+  "3110509": {
+    "nome": "Camanducaia",
+    "idhm": 0.689
+  },
+  "3110707": {
+    "nome": "Cambuquira",
+    "idhm": 0.699
+  },
+  "3110608": {
+    "nome": "Cambuí",
+    "idhm": 0.751
+  },
+  "3110905": {
+    "nome": "Campanha",
+    "idhm": 0.709
+  },
+  "3110806": {
+    "nome": "Campanário",
+    "idhm": 0.616
+  },
+  "3111002": {
+    "nome": "Campestre",
+    "idhm": 0.698
+  },
+  "3111101": {
+    "nome": "Campina Verde",
+    "idhm": 0.704
+  },
+  "3111150": {
+    "nome": "Campo Azul",
+    "idhm": 0.621
+  },
+  "3111200": {
+    "nome": "Campo Belo",
+    "idhm": 0.711
+  },
+  "3111408": {
+    "nome": "Campo Florido",
+    "idhm": 0.706
+  },
+  "3111309": {
+    "nome": "Campo do Meio",
+    "idhm": 0.683
+  },
+  "3111507": {
+    "nome": "Campos Altos",
+    "idhm": 0.702
+  },
+  "3111606": {
+    "nome": "Campos Gerais",
+    "idhm": 0.682
+  },
+  "3111903": {
+    "nome": "Cana Verde",
+    "idhm": 0.65
+  },
+  "3111705": {
+    "nome": "Canaã",
+    "idhm": 0.649
+  },
+  "3112000": {
+    "nome": "Candeias",
+    "idhm": 0.678
+  },
+  "3112059": {
+    "nome": "Cantagalo",
+    "idhm": 0.631
+  },
+  "3111804": {
+    "nome": "Canápolis",
+    "idhm": 0.722
+  },
+  "3112109": {
+    "nome": "Caparaó",
+    "idhm": 0.624
+  },
+  "3112208": {
+    "nome": "Capela Nova",
+    "idhm": 0.648
+  },
+  "3112307": {
+    "nome": "Capelinha",
+    "idhm": 0.653
+  },
+  "3112406": {
+    "nome": "Capetinga",
+    "idhm": 0.675
+  },
+  "3112505": {
+    "nome": "Capim Branco",
+    "idhm": 0.695
+  },
+  "3112604": {
+    "nome": "Capinópolis",
+    "idhm": 0.723
+  },
+  "3112653": {
+    "nome": "Capitão Andrade",
+    "idhm": 0.624
+  },
+  "3112703": {
+    "nome": "Capitão Enéas",
+    "idhm": 0.639
+  },
+  "3112802": {
+    "nome": "Capitólio",
+    "idhm": 0.71
+  },
+  "3112901": {
+    "nome": "Caputira",
+    "idhm": 0.615
+  },
+  "3113107": {
+    "nome": "Caranaíba",
+    "idhm": 0.634
+  },
+  "3113206": {
+    "nome": "Carandaí",
+    "idhm": 0.697
+  },
+  "3113305": {
+    "nome": "Carangola",
+    "idhm": 0.695
+  },
+  "3113404": {
+    "nome": "Caratinga",
+    "idhm": 0.706
+  },
+  "3113008": {
+    "nome": "Caraí",
+    "idhm": 0.558
+  },
+  "3113503": {
+    "nome": "Carbonita",
+    "idhm": 0.638
+  },
+  "3113602": {
+    "nome": "Careaçu",
+    "idhm": 0.683
+  },
+  "3113701": {
+    "nome": "Carlos Chagas",
+    "idhm": 0.648
+  },
+  "3113909": {
+    "nome": "Carmo da Cachoeira",
+    "idhm": 0.655
+  },
+  "3114006": {
+    "nome": "Carmo da Mata",
+    "idhm": 0.689
+  },
+  "3114105": {
+    "nome": "Carmo de Minas",
+    "idhm": 0.682
+  },
+  "3114204": {
+    "nome": "Carmo do Cajuru",
+    "idhm": 0.71
+  },
+  "3114303": {
+    "nome": "Carmo do Paranaíba",
+    "idhm": 0.705
+  },
+  "3114402": {
+    "nome": "Carmo do Rio Claro",
+    "idhm": 0.733
+  },
+  "3113800": {
+    "nome": "Carmésia",
+    "idhm": 0.65
+  },
+  "3114501": {
+    "nome": "Carmópolis de Minas",
+    "idhm": 0.7
+  },
+  "3114550": {
+    "nome": "Carneirinho",
+    "idhm": 0.741
+  },
+  "3114600": {
+    "nome": "Carrancas",
+    "idhm": 0.725
+  },
+  "3114808": {
+    "nome": "Carvalhos",
+    "idhm": 0.646
+  },
+  "3114709": {
+    "nome": "Carvalhópolis",
+    "idhm": 0.724
+  },
+  "3114907": {
+    "nome": "Casa Grande",
+    "idhm": 0.652
+  },
+  "3115003": {
+    "nome": "Cascalho Rico",
+    "idhm": 0.721
+  },
+  "3115300": {
+    "nome": "Cataguases",
+    "idhm": 0.751
+  },
+  "3115359": {
+    "nome": "Catas Altas",
+    "idhm": 0.684
+  },
+  "3115409": {
+    "nome": "Catas Altas da Noruega",
+    "idhm": 0.6
+  },
+  "3115458": {
+    "nome": "Catuji",
+    "idhm": 0.54
+  },
+  "3115474": {
+    "nome": "Catuti",
+    "idhm": 0.621
+  },
+  "3115508": {
+    "nome": "Caxambu",
+    "idhm": 0.743
+  },
+  "3115607": {
+    "nome": "Cedro do Abaeté",
+    "idhm": 0.678
+  },
+  "3115706": {
+    "nome": "Central de Minas",
+    "idhm": 0.665
+  },
+  "3115805": {
+    "nome": "Centralina",
+    "idhm": 0.678
+  },
+  "3116001": {
+    "nome": "Chalé",
+    "idhm": 0.655
+  },
+  "3116159": {
+    "nome": "Chapada Gaúcha",
+    "idhm": 0.635
+  },
+  "3116100": {
+    "nome": "Chapada do Norte",
+    "idhm": 0.598
+  },
+  "3116209": {
+    "nome": "Chiador",
+    "idhm": 0.711
+  },
+  "3115904": {
+    "nome": "Chácara",
+    "idhm": 0.664
+  },
+  "3116308": {
+    "nome": "Cipotânea",
+    "idhm": 0.579
+  },
+  "3116407": {
+    "nome": "Claraval",
+    "idhm": 0.698
+  },
+  "3116506": {
+    "nome": "Claro dos Poções",
+    "idhm": 0.67
+  },
+  "3116605": {
+    "nome": "Cláudio",
+    "idhm": 0.709
+  },
+  "3116704": {
+    "nome": "Coimbra",
+    "idhm": 0.669
+  },
+  "3116803": {
+    "nome": "Coluna",
+    "idhm": 0.583
+  },
+  "3116902": {
+    "nome": "Comendador Gomes",
+    "idhm": 0.697
+  },
+  "3117009": {
+    "nome": "Comercinho",
+    "idhm": 0.593
+  },
+  "3117108": {
+    "nome": "Conceição da Aparecida",
+    "idhm": 0.691
+  },
+  "3115201": {
+    "nome": "Conceição da Barra de Minas",
+    "idhm": 0.685
+  },
+  "3117306": {
+    "nome": "Conceição das Alagoas",
+    "idhm": 0.712
+  },
+  "3117207": {
+    "nome": "Conceição das Pedras",
+    "idhm": 0.668
+  },
+  "3117405": {
+    "nome": "Conceição de Ipanema",
+    "idhm": 0.676
+  },
+  "3117504": {
+    "nome": "Conceição do Mato Dentro",
+    "idhm": 0.634
+  },
+  "3117603": {
+    "nome": "Conceição do Pará",
+    "idhm": 0.7
+  },
+  "3117702": {
+    "nome": "Conceição do Rio Verde",
+    "idhm": 0.665
+  },
+  "3117801": {
+    "nome": "Conceição dos Ouros",
+    "idhm": 0.703
+  },
+  "3117876": {
+    "nome": "Confins",
+    "idhm": 0.747
+  },
+  "3117900": {
+    "nome": "Congonhal",
+    "idhm": 0.712
+  },
+  "3118007": {
+    "nome": "Congonhas",
+    "idhm": 0.753
+  },
+  "3118106": {
+    "nome": "Congonhas do Norte",
+    "idhm": 0.568
+  },
+  "3118205": {
+    "nome": "Conquista",
+    "idhm": 0.729
+  },
+  "3118304": {
+    "nome": "Conselheiro Lafaiete",
+    "idhm": 0.761
+  },
+  "3118403": {
+    "nome": "Conselheiro Pena",
+    "idhm": 0.662
+  },
+  "3118502": {
+    "nome": "Consolação",
+    "idhm": 0.673
+  },
+  "3118601": {
+    "nome": "Contagem",
+    "idhm": 0.756
+  },
+  "3118700": {
+    "nome": "Coqueiral",
+    "idhm": 0.694
+  },
+  "3118809": {
+    "nome": "Coração de Jesus",
+    "idhm": 0.642
+  },
+  "3118908": {
+    "nome": "Cordisburgo",
+    "idhm": 0.656
+  },
+  "3119005": {
+    "nome": "Cordislândia",
+    "idhm": 0.66
+  },
+  "3119104": {
+    "nome": "Corinto",
+    "idhm": 0.68
+  },
+  "3119203": {
+    "nome": "Coroaci",
+    "idhm": 0.626
+  },
+  "3119302": {
+    "nome": "Coromandel",
+    "idhm": 0.708
+  },
+  "3119401": {
+    "nome": "Coronel Fabriciano",
+    "idhm": 0.755
+  },
+  "3119500": {
+    "nome": "Coronel Murta",
+    "idhm": 0.627
+  },
+  "3119609": {
+    "nome": "Coronel Pacheco",
+    "idhm": 0.669
+  },
+  "3119708": {
+    "nome": "Coronel Xavier Chaves",
+    "idhm": 0.677
+  },
+  "3120102": {
+    "nome": "Couto de Magalhães de Minas",
+    "idhm": 0.659
+  },
+  "3120201": {
+    "nome": "Cristais",
+    "idhm": 0.692
+  },
+  "3120409": {
+    "nome": "Cristiano Otoni",
+    "idhm": 0.695
+  },
+  "3120508": {
+    "nome": "Cristina",
+    "idhm": 0.668
+  },
+  "3120300": {
+    "nome": "Cristália",
+    "idhm": 0.583
+  },
+  "3120151": {
+    "nome": "Crisólita",
+    "idhm": 0.585
+  },
+  "3120607": {
+    "nome": "Crucilândia",
+    "idhm": 0.651
+  },
+  "3120706": {
+    "nome": "Cruzeiro da Fortaleza",
+    "idhm": 0.696
+  },
+  "3120805": {
+    "nome": "Cruzília",
+    "idhm": 0.695
+  },
+  "3120839": {
+    "nome": "Cuparaque",
+    "idhm": 0.627
+  },
+  "3120870": {
+    "nome": "Curral de Dentro",
+    "idhm": 0.585
+  },
+  "3120904": {
+    "nome": "Curvelo",
+    "idhm": 0.713
+  },
+  "3115102": {
+    "nome": "Cássia",
+    "idhm": 0.704
+  },
+  "3119807": {
+    "nome": "Córrego Danta",
+    "idhm": 0.692
+  },
+  "3119955": {
+    "nome": "Córrego Fundo",
+    "idhm": 0.678
+  },
+  "3120003": {
+    "nome": "Córrego Novo",
+    "idhm": 0.632
+  },
+  "3119906": {
+    "nome": "Córrego do Bom Jesus",
+    "idhm": 0.692
+  },
+  "3117836": {
+    "nome": "Cônego Marinho",
+    "idhm": 0.621
+  },
+  "3121001": {
+    "nome": "Datas",
+    "idhm": 0.616
+  },
+  "3121100": {
+    "nome": "Delfim Moreira",
+    "idhm": 0.669
+  },
+  "3121209": {
+    "nome": "Delfinópolis",
+    "idhm": 0.74
+  },
+  "3121258": {
+    "nome": "Delta",
+    "idhm": 0.639
+  },
+  "3121308": {
+    "nome": "Descoberto",
+    "idhm": 0.68
+  },
+  "3121407": {
+    "nome": "Desterro de Entre Rios",
+    "idhm": 0.639
+  },
+  "3121506": {
+    "nome": "Desterro do Melo",
+    "idhm": 0.631
+  },
+  "3121605": {
+    "nome": "Diamantina",
+    "idhm": 0.716
+  },
+  "3121704": {
+    "nome": "Diogo de Vasconcelos",
+    "idhm": 0.601
+  },
+  "3121803": {
+    "nome": "Dionísio",
+    "idhm": 0.702
+  },
+  "3122009": {
+    "nome": "Divino",
+    "idhm": 0.605
+  },
+  "3122108": {
+    "nome": "Divino das Laranjeiras",
+    "idhm": 0.661
+  },
+  "3122207": {
+    "nome": "Divinolândia de Minas",
+    "idhm": 0.623
+  },
+  "3121902": {
+    "nome": "Divinésia",
+    "idhm": 0.657
+  },
+  "3122306": {
+    "nome": "Divinópolis",
+    "idhm": 0.764
+  },
+  "3122355": {
+    "nome": "Divisa Alegre",
+    "idhm": 0.608
+  },
+  "3122405": {
+    "nome": "Divisa Nova",
+    "idhm": 0.67
+  },
+  "3122454": {
+    "nome": "Divisópolis",
+    "idhm": 0.609
+  },
+  "3122470": {
+    "nome": "Dom Bosco",
+    "idhm": 0.673
+  },
+  "3122504": {
+    "nome": "Dom Cavati",
+    "idhm": 0.688
+  },
+  "3122603": {
+    "nome": "Dom Joaquim",
+    "idhm": 0.622
+  },
+  "3122702": {
+    "nome": "Dom Silvério",
+    "idhm": 0.709
+  },
+  "3122801": {
+    "nome": "Dom Viçoso",
+    "idhm": 0.687
+  },
+  "3122900": {
+    "nome": "Dona Eusébia",
+    "idhm": 0.701
+  },
+  "3123007": {
+    "nome": "Dores de Campos",
+    "idhm": 0.686
+  },
+  "3123106": {
+    "nome": "Dores de Guanhães",
+    "idhm": 0.636
+  },
+  "3123205": {
+    "nome": "Dores do Indaiá",
+    "idhm": 0.719
+  },
+  "3123304": {
+    "nome": "Dores do Turvo",
+    "idhm": 0.629
+  },
+  "3123403": {
+    "nome": "Doresópolis",
+    "idhm": 0.692
+  },
+  "3123502": {
+    "nome": "Douradoquara",
+    "idhm": 0.706
+  },
+  "3123528": {
+    "nome": "Durandé",
+    "idhm": 0.645
+  },
+  "3123601": {
+    "nome": "Elói Mendes",
+    "idhm": 0.685
+  },
+  "3123700": {
+    "nome": "Engenheiro Caldas",
+    "idhm": 0.644
+  },
+  "3123809": {
+    "nome": "Engenheiro Navarro",
+    "idhm": 0.655
+  },
+  "3123858": {
+    "nome": "Entre Folhas",
+    "idhm": 0.634
+  },
+  "3123908": {
+    "nome": "Entre Rios de Minas",
+    "idhm": 0.672
+  },
+  "3124005": {
+    "nome": "Ervália",
+    "idhm": 0.625
+  },
+  "3124104": {
+    "nome": "Esmeraldas",
+    "idhm": 0.671
+  },
+  "3124203": {
+    "nome": "Espera Feliz",
+    "idhm": 0.663
+  },
+  "3124302": {
+    "nome": "Espinosa",
+    "idhm": 0.627
+  },
+  "3124401": {
+    "nome": "Espírito Santo do Dourado",
+    "idhm": 0.685
+  },
+  "3124500": {
+    "nome": "Estiva",
+    "idhm": 0.691
+  },
+  "3124609": {
+    "nome": "Estrela Dalva",
+    "idhm": 0.71
+  },
+  "3124708": {
+    "nome": "Estrela do Indaiá",
+    "idhm": 0.676
+  },
+  "3124807": {
+    "nome": "Estrela do Sul",
+    "idhm": 0.696
+  },
+  "3124906": {
+    "nome": "Eugenópolis",
+    "idhm": 0.675
+  },
+  "3125002": {
+    "nome": "Ewbank da Câmara",
+    "idhm": 0.676
+  },
+  "3125101": {
+    "nome": "Extrema",
+    "idhm": 0.732
+  },
+  "3125200": {
+    "nome": "Fama",
+    "idhm": 0.717
+  },
+  "3125309": {
+    "nome": "Faria Lemos",
+    "idhm": 0.687
+  },
+  "3125606": {
+    "nome": "Felisburgo",
+    "idhm": 0.583
+  },
+  "3125705": {
+    "nome": "Felixlândia",
+    "idhm": 0.648
+  },
+  "3125408": {
+    "nome": "Felício dos Santos",
+    "idhm": 0.606
+  },
+  "3125804": {
+    "nome": "Fernandes Tourinho",
+    "idhm": 0.646
+  },
+  "3125903": {
+    "nome": "Ferros",
+    "idhm": 0.603
+  },
+  "3125952": {
+    "nome": "Fervedouro",
+    "idhm": 0.58
+  },
+  "3126000": {
+    "nome": "Florestal",
+    "idhm": 0.724
+  },
+  "3126109": {
+    "nome": "Formiga",
+    "idhm": 0.755
+  },
+  "3126208": {
+    "nome": "Formoso",
+    "idhm": 0.64
+  },
+  "3126307": {
+    "nome": "Fortaleza de Minas",
+    "idhm": 0.67
+  },
+  "3126406": {
+    "nome": "Fortuna de Minas",
+    "idhm": 0.696
+  },
+  "3126505": {
+    "nome": "Francisco Badaró",
+    "idhm": 0.622
+  },
+  "3126604": {
+    "nome": "Francisco Dumont",
+    "idhm": 0.625
+  },
+  "3126703": {
+    "nome": "Francisco Sá",
+    "idhm": 0.654
+  },
+  "3126752": {
+    "nome": "Franciscópolis",
+    "idhm": 0.603
+  },
+  "3126802": {
+    "nome": "Frei Gaspar",
+    "idhm": 0.59
+  },
+  "3126901": {
+    "nome": "Frei Inocêncio",
+    "idhm": 0.648
+  },
+  "3126950": {
+    "nome": "Frei Lagonegro",
+    "idhm": 0.543
+  },
+  "3127008": {
+    "nome": "Fronteira",
+    "idhm": 0.684
+  },
+  "3127057": {
+    "nome": "Fronteira dos Vales",
+    "idhm": 0.592
+  },
+  "3127073": {
+    "nome": "Fruta de Leite",
+    "idhm": 0.544
+  },
+  "3127107": {
+    "nome": "Frutal",
+    "idhm": 0.73
+  },
+  "3127206": {
+    "nome": "Funilândia",
+    "idhm": 0.655
+  },
+  "3127305": {
+    "nome": "Galiléia",
+    "idhm": 0.654
+  },
+  "3127339": {
+    "nome": "Gameleiras",
+    "idhm": 0.65
+  },
+  "3127354": {
+    "nome": "Glaucilândia",
+    "idhm": 0.679
+  },
+  "3127370": {
+    "nome": "Goiabeira",
+    "idhm": 0.647
+  },
+  "3127388": {
+    "nome": "Goianá",
+    "idhm": 0.716
+  },
+  "3127503": {
+    "nome": "Gonzaga",
+    "idhm": 0.606
+  },
+  "3127404": {
+    "nome": "Gonçalves",
+    "idhm": 0.683
+  },
+  "3127602": {
+    "nome": "Gouveia",
+    "idhm": 0.681
+  },
+  "3127701": {
+    "nome": "Governador Valadares",
+    "idhm": 0.727
+  },
+  "3127909": {
+    "nome": "Grupiara",
+    "idhm": 0.731
+  },
+  "3127800": {
+    "nome": "Grão Mogol",
+    "idhm": 0.604
+  },
+  "3128006": {
+    "nome": "Guanhães",
+    "idhm": 0.686
+  },
+  "3128105": {
+    "nome": "Guapé",
+    "idhm": 0.679
+  },
+  "3128204": {
+    "nome": "Guaraciaba",
+    "idhm": 0.623
+  },
+  "3128253": {
+    "nome": "Guaraciama",
+    "idhm": 0.677
+  },
+  "3128402": {
+    "nome": "Guarani",
+    "idhm": 0.677
+  },
+  "3128303": {
+    "nome": "Guaranésia",
+    "idhm": 0.701
+  },
+  "3128501": {
+    "nome": "Guarará",
+    "idhm": 0.652
+  },
+  "3128600": {
+    "nome": "Guarda-Mor",
+    "idhm": 0.69
+  },
+  "3128709": {
+    "nome": "Guaxupé",
+    "idhm": 0.751
+  },
+  "3128808": {
+    "nome": "Guidoval",
+    "idhm": 0.683
+  },
+  "3128907": {
+    "nome": "Guimarânia",
+    "idhm": 0.693
+  },
+  "3129004": {
+    "nome": "Guiricema",
+    "idhm": 0.674
+  },
+  "3129103": {
+    "nome": "Gurinhatã",
+    "idhm": 0.68
+  },
+  "3129202": {
+    "nome": "Heliodora",
+    "idhm": 0.657
+  },
+  "3129301": {
+    "nome": "Iapu",
+    "idhm": 0.654
+  },
+  "3129400": {
+    "nome": "Ibertioga",
+    "idhm": 0.657
+  },
+  "3129608": {
+    "nome": "Ibiaí",
+    "idhm": 0.614
+  },
+  "3129657": {
+    "nome": "Ibiracatu",
+    "idhm": 0.591
+  },
+  "3129707": {
+    "nome": "Ibiraci",
+    "idhm": 0.706
+  },
+  "3129806": {
+    "nome": "Ibirité",
+    "idhm": 0.704
+  },
+  "3129905": {
+    "nome": "Ibitiúra de Minas",
+    "idhm": 0.674
+  },
+  "3130002": {
+    "nome": "Ibituruna",
+    "idhm": 0.675
+  },
+  "3129509": {
+    "nome": "Ibiá",
+    "idhm": 0.718
+  },
+  "3130051": {
+    "nome": "Icaraí de Minas",
+    "idhm": 0.624
+  },
+  "3130101": {
+    "nome": "Igarapé",
+    "idhm": 0.698
+  },
+  "3130200": {
+    "nome": "Igaratinga",
+    "idhm": 0.651
+  },
+  "3130309": {
+    "nome": "Iguatama",
+    "idhm": 0.707
+  },
+  "3130408": {
+    "nome": "Ijaci",
+    "idhm": 0.714
+  },
+  "3130507": {
+    "nome": "Ilicínea",
+    "idhm": 0.68
+  },
+  "3130556": {
+    "nome": "Imbé de Minas",
+    "idhm": 0.553
+  },
+  "3130606": {
+    "nome": "Inconfidentes",
+    "idhm": 0.692
+  },
+  "3130655": {
+    "nome": "Indaiabira",
+    "idhm": 0.61
+  },
+  "3130705": {
+    "nome": "Indianópolis",
+    "idhm": 0.674
+  },
+  "3130804": {
+    "nome": "Ingaí",
+    "idhm": 0.697
+  },
+  "3130903": {
+    "nome": "Inhapim",
+    "idhm": 0.658
+  },
+  "3131000": {
+    "nome": "Inhaúma",
+    "idhm": 0.702
+  },
+  "3131109": {
+    "nome": "Inimutaba",
+    "idhm": 0.664
+  },
+  "3131158": {
+    "nome": "Ipaba",
+    "idhm": 0.665
+  },
+  "3131208": {
+    "nome": "Ipanema",
+    "idhm": 0.693
+  },
+  "3131307": {
+    "nome": "Ipatinga",
+    "idhm": 0.771
+  },
+  "3131406": {
+    "nome": "Ipiaçu",
+    "idhm": 0.696
+  },
+  "3131505": {
+    "nome": "Ipuiúna",
+    "idhm": 0.686
+  },
+  "3131604": {
+    "nome": "Iraí de Minas",
+    "idhm": 0.695
+  },
+  "3131703": {
+    "nome": "Itabira",
+    "idhm": 0.756
+  },
+  "3131802": {
+    "nome": "Itabirinha",
+    "idhm": 0.653
+  },
+  "3131901": {
+    "nome": "Itabirito",
+    "idhm": 0.73
+  },
+  "3132008": {
+    "nome": "Itacambira",
+    "idhm": 0.628
+  },
+  "3132107": {
+    "nome": "Itacarambi",
+    "idhm": 0.641
+  },
+  "3132206": {
+    "nome": "Itaguara",
+    "idhm": 0.691
+  },
+  "3132305": {
+    "nome": "Itaipé",
+    "idhm": 0.552
+  },
+  "3132404": {
+    "nome": "Itajubá",
+    "idhm": 0.787
+  },
+  "3132503": {
+    "nome": "Itamarandiba",
+    "idhm": 0.646
+  },
+  "3132602": {
+    "nome": "Itamarati de Minas",
+    "idhm": 0.688
+  },
+  "3132701": {
+    "nome": "Itambacuri",
+    "idhm": 0.634
+  },
+  "3132800": {
+    "nome": "Itambé do Mato Dentro",
+    "idhm": 0.634
+  },
+  "3132909": {
+    "nome": "Itamogi",
+    "idhm": 0.674
+  },
+  "3133006": {
+    "nome": "Itamonte",
+    "idhm": 0.705
+  },
+  "3133105": {
+    "nome": "Itanhandu",
+    "idhm": 0.739
+  },
+  "3133204": {
+    "nome": "Itanhomi",
+    "idhm": 0.65
+  },
+  "3133303": {
+    "nome": "Itaobim",
+    "idhm": 0.629
+  },
+  "3133402": {
+    "nome": "Itapagipe",
+    "idhm": 0.723
+  },
+  "3133501": {
+    "nome": "Itapecerica",
+    "idhm": 0.713
+  },
+  "3133600": {
+    "nome": "Itapeva",
+    "idhm": 0.72
+  },
+  "3133709": {
+    "nome": "Itatiaiuçu",
+    "idhm": 0.677
+  },
+  "3133907": {
+    "nome": "Itaverava",
+    "idhm": 0.627
+  },
+  "3133758": {
+    "nome": "Itaú de Minas",
+    "idhm": 0.776
+  },
+  "3133808": {
+    "nome": "Itaúna",
+    "idhm": 0.758
+  },
+  "3134004": {
+    "nome": "Itinga",
+    "idhm": 0.6
+  },
+  "3134103": {
+    "nome": "Itueta",
+    "idhm": 0.635
+  },
+  "3134202": {
+    "nome": "Ituiutaba",
+    "idhm": 0.739
+  },
+  "3134301": {
+    "nome": "Itumirim",
+    "idhm": 0.726
+  },
+  "3134400": {
+    "nome": "Iturama",
+    "idhm": 0.747
+  },
+  "3134509": {
+    "nome": "Itutinga",
+    "idhm": 0.727
+  },
+  "3134608": {
+    "nome": "Jaboticatubas",
+    "idhm": 0.681
+  },
+  "3134707": {
+    "nome": "Jacinto",
+    "idhm": 0.62
+  },
+  "3134905": {
+    "nome": "Jacutinga",
+    "idhm": 0.715
+  },
+  "3134806": {
+    "nome": "Jacuí",
+    "idhm": 0.668
+  },
+  "3135001": {
+    "nome": "Jaguaraçu",
+    "idhm": 0.679
+  },
+  "3135076": {
+    "nome": "Jampruca",
+    "idhm": 0.609
+  },
+  "3135100": {
+    "nome": "Janaúba",
+    "idhm": 0.696
+  },
+  "3135209": {
+    "nome": "Januária",
+    "idhm": 0.658
+  },
+  "3135308": {
+    "nome": "Japaraíba",
+    "idhm": 0.721
+  },
+  "3135357": {
+    "nome": "Japonvar",
+    "idhm": 0.608
+  },
+  "3135050": {
+    "nome": "Jaíba",
+    "idhm": 0.638
+  },
+  "3135407": {
+    "nome": "Jeceaba",
+    "idhm": 0.661
+  },
+  "3135456": {
+    "nome": "Jenipapo de Minas",
+    "idhm": 0.624
+  },
+  "3135506": {
+    "nome": "Jequeri",
+    "idhm": 0.601
+  },
+  "3135605": {
+    "nome": "Jequitaí",
+    "idhm": 0.643
+  },
+  "3135704": {
+    "nome": "Jequitibá",
+    "idhm": 0.689
+  },
+  "3135803": {
+    "nome": "Jequitinhonha",
+    "idhm": 0.615
+  },
+  "3135902": {
+    "nome": "Jesuânia",
+    "idhm": 0.658
+  },
+  "3136108": {
+    "nome": "Joanésia",
+    "idhm": 0.626
+  },
+  "3136405": {
+    "nome": "Joaquim Felício",
+    "idhm": 0.637
+  },
+  "3136009": {
+    "nome": "Joaíma",
+    "idhm": 0.587
+  },
+  "3136504": {
+    "nome": "Jordânia",
+    "idhm": 0.628
+  },
+  "3136579": {
+    "nome": "Josenópolis",
+    "idhm": 0.564
+  },
+  "3136520": {
+    "nome": "José Gonçalves de Minas",
+    "idhm": 0.632
+  },
+  "3136553": {
+    "nome": "José Raydan",
+    "idhm": 0.617
+  },
+  "3136207": {
+    "nome": "João Monlevade",
+    "idhm": 0.758
+  },
+  "3136306": {
+    "nome": "João Pinheiro",
+    "idhm": 0.697
+  },
+  "3136652": {
+    "nome": "Juatuba",
+    "idhm": 0.717
+  },
+  "3136702": {
+    "nome": "Juiz de Fora",
+    "idhm": 0.778
+  },
+  "3136801": {
+    "nome": "Juramento",
+    "idhm": 0.669
+  },
+  "3136900": {
+    "nome": "Juruaia",
+    "idhm": 0.723
+  },
+  "3136959": {
+    "nome": "Juvenília",
+    "idhm": 0.592
+  },
+  "3137007": {
+    "nome": "Ladainha",
+    "idhm": 0.541
+  },
+  "3137106": {
+    "nome": "Lagamar",
+    "idhm": 0.718
+  },
+  "3137403": {
+    "nome": "Lagoa Dourada",
+    "idhm": 0.676
+  },
+  "3137502": {
+    "nome": "Lagoa Formosa",
+    "idhm": 0.703
+  },
+  "3137536": {
+    "nome": "Lagoa Grande",
+    "idhm": 0.679
+  },
+  "3137601": {
+    "nome": "Lagoa Santa",
+    "idhm": 0.777
+  },
+  "3137205": {
+    "nome": "Lagoa da Prata",
+    "idhm": 0.732
+  },
+  "3137304": {
+    "nome": "Lagoa dos Patos",
+    "idhm": 0.634
+  },
+  "3137700": {
+    "nome": "Lajinha",
+    "idhm": 0.661
+  },
+  "3137809": {
+    "nome": "Lambari",
+    "idhm": 0.711
+  },
+  "3137908": {
+    "nome": "Lamim",
+    "idhm": 0.655
+  },
+  "3138005": {
+    "nome": "Laranjal",
+    "idhm": 0.714
+  },
+  "3138104": {
+    "nome": "Lassance",
+    "idhm": 0.629
+  },
+  "3138203": {
+    "nome": "Lavras",
+    "idhm": 0.782
+  },
+  "3138302": {
+    "nome": "Leandro Ferreira",
+    "idhm": 0.71
+  },
+  "3138351": {
+    "nome": "Leme do Prado",
+    "idhm": 0.67
+  },
+  "3138401": {
+    "nome": "Leopoldina",
+    "idhm": 0.726
+  },
+  "3138500": {
+    "nome": "Liberdade",
+    "idhm": 0.672
+  },
+  "3138609": {
+    "nome": "Lima Duarte",
+    "idhm": 0.71
+  },
+  "3138625": {
+    "nome": "Limeira do Oeste",
+    "idhm": 0.71
+  },
+  "3138658": {
+    "nome": "Lontra",
+    "idhm": 0.646
+  },
+  "3138674": {
+    "nome": "Luisburgo",
+    "idhm": 0.608
+  },
+  "3138682": {
+    "nome": "Luislândia",
+    "idhm": 0.614
+  },
+  "3138708": {
+    "nome": "Luminárias",
+    "idhm": 0.678
+  },
+  "3138807": {
+    "nome": "Luz",
+    "idhm": 0.724
+  },
+  "3138906": {
+    "nome": "Machacalis",
+    "idhm": 0.64
+  },
+  "3139003": {
+    "nome": "Machado",
+    "idhm": 0.715
+  },
+  "3139102": {
+    "nome": "Madre de Deus de Minas",
+    "idhm": 0.699
+  },
+  "3139201": {
+    "nome": "Malacacheta",
+    "idhm": 0.618
+  },
+  "3139250": {
+    "nome": "Mamonas",
+    "idhm": 0.618
+  },
+  "3139300": {
+    "nome": "Manga",
+    "idhm": 0.642
+  },
+  "3139409": {
+    "nome": "Manhuaçu",
+    "idhm": 0.689
+  },
+  "3139508": {
+    "nome": "Manhumirim",
+    "idhm": 0.697
+  },
+  "3139607": {
+    "nome": "Mantena",
+    "idhm": 0.675
+  },
+  "3139805": {
+    "nome": "Mar de Espanha",
+    "idhm": 0.684
+  },
+  "3139706": {
+    "nome": "Maravilhas",
+    "idhm": 0.672
+  },
+  "3139904": {
+    "nome": "Maria da Fé",
+    "idhm": 0.702
+  },
+  "3140001": {
+    "nome": "Mariana",
+    "idhm": 0.742
+  },
+  "3140100": {
+    "nome": "Marilac",
+    "idhm": 0.615
+  },
+  "3140209": {
+    "nome": "Maripá de Minas",
+    "idhm": 0.68
+  },
+  "3140308": {
+    "nome": "Marliéria",
+    "idhm": 0.657
+  },
+  "3140407": {
+    "nome": "Marmelópolis",
+    "idhm": 0.65
+  },
+  "3140506": {
+    "nome": "Martinho Campos",
+    "idhm": 0.669
+  },
+  "3140530": {
+    "nome": "Martins Soares",
+    "idhm": 0.635
+  },
+  "3140555": {
+    "nome": "Mata Verde",
+    "idhm": 0.581
+  },
+  "3140605": {
+    "nome": "Materlândia",
+    "idhm": 0.597
+  },
+  "3140704": {
+    "nome": "Mateus Leme",
+    "idhm": 0.704
+  },
+  "3171501": {
+    "nome": "Mathias Lobato",
+    "idhm": 0.612
+  },
+  "3140803": {
+    "nome": "Matias Barbosa",
+    "idhm": 0.72
+  },
+  "3140852": {
+    "nome": "Matias Cardoso",
+    "idhm": 0.616
+  },
+  "3140902": {
+    "nome": "Matipó",
+    "idhm": 0.631
+  },
+  "3141009": {
+    "nome": "Mato Verde",
+    "idhm": 0.662
+  },
+  "3141108": {
+    "nome": "Matozinhos",
+    "idhm": 0.731
+  },
+  "3141207": {
+    "nome": "Matutina",
+    "idhm": 0.707
+  },
+  "3141306": {
+    "nome": "Medeiros",
+    "idhm": 0.711
+  },
+  "3141405": {
+    "nome": "Medina",
+    "idhm": 0.624
+  },
+  "3141504": {
+    "nome": "Mendes Pimentel",
+    "idhm": 0.626
+  },
+  "3141603": {
+    "nome": "Mercês",
+    "idhm": 0.664
+  },
+  "3141702": {
+    "nome": "Mesquita",
+    "idhm": 0.656
+  },
+  "3141801": {
+    "nome": "Minas Novas",
+    "idhm": 0.633
+  },
+  "3141900": {
+    "nome": "Minduri",
+    "idhm": 0.658
+  },
+  "3142007": {
+    "nome": "Mirabela",
+    "idhm": 0.665
+  },
+  "3142106": {
+    "nome": "Miradouro",
+    "idhm": 0.663
+  },
+  "3142254": {
+    "nome": "Miravânia",
+    "idhm": 0.593
+  },
+  "3142205": {
+    "nome": "Miraí",
+    "idhm": 0.68
+  },
+  "3142304": {
+    "nome": "Moeda",
+    "idhm": 0.638
+  },
+  "3142403": {
+    "nome": "Moema",
+    "idhm": 0.721
+  },
+  "3142502": {
+    "nome": "Monjolos",
+    "idhm": 0.65
+  },
+  "3142601": {
+    "nome": "Monsenhor Paulo",
+    "idhm": 0.721
+  },
+  "3142700": {
+    "nome": "Montalvânia",
+    "idhm": 0.613
+  },
+  "3142809": {
+    "nome": "Monte Alegre de Minas",
+    "idhm": 0.674
+  },
+  "3142908": {
+    "nome": "Monte Azul",
+    "idhm": 0.659
+  },
+  "3143005": {
+    "nome": "Monte Belo",
+    "idhm": 0.688
+  },
+  "3143104": {
+    "nome": "Monte Carmelo",
+    "idhm": 0.728
+  },
+  "3143153": {
+    "nome": "Monte Formoso",
+    "idhm": 0.541
+  },
+  "3143203": {
+    "nome": "Monte Santo de Minas",
+    "idhm": 0.71
+  },
+  "3143401": {
+    "nome": "Monte Sião",
+    "idhm": 0.724
+  },
+  "3143302": {
+    "nome": "Montes Claros",
+    "idhm": 0.77
+  },
+  "3143450": {
+    "nome": "Montezuma",
+    "idhm": 0.587
+  },
+  "3143500": {
+    "nome": "Morada Nova de Minas",
+    "idhm": 0.696
+  },
+  "3143609": {
+    "nome": "Morro da Garça",
+    "idhm": 0.648
+  },
+  "3143708": {
+    "nome": "Morro do Pilar",
+    "idhm": 0.597
+  },
+  "3143807": {
+    "nome": "Munhoz",
+    "idhm": 0.647
+  },
+  "3143906": {
+    "nome": "Muriaé",
+    "idhm": 0.734
+  },
+  "3144003": {
+    "nome": "Mutum",
+    "idhm": 0.644
+  },
+  "3144102": {
+    "nome": "Muzambinho",
+    "idhm": 0.74
+  },
+  "3140159": {
+    "nome": "Mário Campos",
+    "idhm": 0.699
+  },
+  "3144201": {
+    "nome": "Nacip Raydan",
+    "idhm": 0.585
+  },
+  "3144300": {
+    "nome": "Nanuque",
+    "idhm": 0.701
+  },
+  "3144359": {
+    "nome": "Naque",
+    "idhm": 0.675
+  },
+  "3144375": {
+    "nome": "Natalândia",
+    "idhm": 0.671
+  },
+  "3144409": {
+    "nome": "Natércia",
+    "idhm": 0.693
+  },
+  "3144508": {
+    "nome": "Nazareno",
+    "idhm": 0.69
+  },
+  "3144607": {
+    "nome": "Nepomuceno",
+    "idhm": 0.667
+  },
+  "3144656": {
+    "nome": "Ninheira",
+    "idhm": 0.556
+  },
+  "3144672": {
+    "nome": "Nova Belém",
+    "idhm": 0.592
+  },
+  "3144706": {
+    "nome": "Nova Era",
+    "idhm": 0.709
+  },
+  "3144805": {
+    "nome": "Nova Lima",
+    "idhm": 0.813
+  },
+  "3144904": {
+    "nome": "Nova Módica",
+    "idhm": 0.63
+  },
+  "3145000": {
+    "nome": "Nova Ponte",
+    "idhm": 0.701
+  },
+  "3145059": {
+    "nome": "Nova Porteirinha",
+    "idhm": 0.641
+  },
+  "3145109": {
+    "nome": "Nova Resende",
+    "idhm": 0.671
+  },
+  "3145208": {
+    "nome": "Nova Serrana",
+    "idhm": 0.715
+  },
+  "3136603": {
+    "nome": "Nova União",
+    "idhm": 0.662
+  },
+  "3145307": {
+    "nome": "Novo Cruzeiro",
+    "idhm": 0.571
+  },
+  "3145356": {
+    "nome": "Novo Oriente de Minas",
+    "idhm": 0.555
+  },
+  "3145372": {
+    "nome": "Novorizonte",
+    "idhm": 0.616
+  },
+  "3145406": {
+    "nome": "Olaria",
+    "idhm": 0.636
+  },
+  "3145455": {
+    "nome": "Olhos-d'Água",
+    "idhm": 0.626
+  },
+  "3145604": {
+    "nome": "Oliveira",
+    "idhm": 0.699
+  },
+  "3145703": {
+    "nome": "Oliveira Fortes",
+    "idhm": 0.635
+  },
+  "3145505": {
+    "nome": "Olímpio Noronha",
+    "idhm": 0.674
+  },
+  "3145802": {
+    "nome": "Onça de Pitangui",
+    "idhm": 0.663
+  },
+  "3145851": {
+    "nome": "Oratórios",
+    "idhm": 0.637
+  },
+  "3145877": {
+    "nome": "Orizânia",
+    "idhm": 0.562
+  },
+  "3145901": {
+    "nome": "Ouro Branco",
+    "idhm": 0.764
+  },
+  "3146008": {
+    "nome": "Ouro Fino",
+    "idhm": 0.722
+  },
+  "3146107": {
+    "nome": "Ouro Preto",
+    "idhm": 0.741
+  },
+  "3146206": {
+    "nome": "Ouro Verde de Minas",
+    "idhm": 0.595
+  },
+  "3146255": {
+    "nome": "Padre Carvalho",
+    "idhm": 0.599
+  },
+  "3146305": {
+    "nome": "Padre Paraíso",
+    "idhm": 0.596
+  },
+  "3146552": {
+    "nome": "Pai Pedro",
+    "idhm": 0.59
+  },
+  "3146404": {
+    "nome": "Paineiras",
+    "idhm": 0.669
+  },
+  "3146503": {
+    "nome": "Pains",
+    "idhm": 0.728
+  },
+  "3146602": {
+    "nome": "Paiva",
+    "idhm": 0.72
+  },
+  "3146701": {
+    "nome": "Palma",
+    "idhm": 0.703
+  },
+  "3146750": {
+    "nome": "Palmópolis",
+    "idhm": 0.565
+  },
+  "3146909": {
+    "nome": "Papagaios",
+    "idhm": 0.666
+  },
+  "3147006": {
+    "nome": "Paracatu",
+    "idhm": 0.744
+  },
+  "3147204": {
+    "nome": "Paraguaçu",
+    "idhm": 0.715
+  },
+  "3147303": {
+    "nome": "Paraisópolis",
+    "idhm": 0.729
+  },
+  "3147402": {
+    "nome": "Paraopeba",
+    "idhm": 0.694
+  },
+  "3147105": {
+    "nome": "Pará de Minas",
+    "idhm": 0.725
+  },
+  "3147600": {
+    "nome": "Passa Quatro",
+    "idhm": 0.715
+  },
+  "3147709": {
+    "nome": "Passa Tempo",
+    "idhm": 0.687
+  },
+  "3147808": {
+    "nome": "Passa-Vinte",
+    "idhm": 0.648
+  },
+  "3147501": {
+    "nome": "Passabém",
+    "idhm": 0.642
+  },
+  "3147907": {
+    "nome": "Passos",
+    "idhm": 0.756
+  },
+  "3147956": {
+    "nome": "Patis",
+    "idhm": 0.614
+  },
+  "3148004": {
+    "nome": "Patos de Minas",
+    "idhm": 0.765
+  },
+  "3148103": {
+    "nome": "Patrocínio",
+    "idhm": 0.729
+  },
+  "3148202": {
+    "nome": "Patrocínio do Muriaé",
+    "idhm": 0.682
+  },
+  "3148301": {
+    "nome": "Paula Cândido",
+    "idhm": 0.637
+  },
+  "3148400": {
+    "nome": "Paulistas",
+    "idhm": 0.625
+  },
+  "3148509": {
+    "nome": "Pavão",
+    "idhm": 0.627
+  },
+  "3148707": {
+    "nome": "Pedra Azul",
+    "idhm": 0.627
+  },
+  "3148756": {
+    "nome": "Pedra Bonita",
+    "idhm": 0.573
+  },
+  "3149002": {
+    "nome": "Pedra Dourada",
+    "idhm": 0.655
+  },
+  "3148806": {
+    "nome": "Pedra do Anta",
+    "idhm": 0.624
+  },
+  "3148905": {
+    "nome": "Pedra do Indaiá",
+    "idhm": 0.708
+  },
+  "3149101": {
+    "nome": "Pedralva",
+    "idhm": 0.675
+  },
+  "3149150": {
+    "nome": "Pedras de Maria da Cruz",
+    "idhm": 0.614
+  },
+  "3149200": {
+    "nome": "Pedrinópolis",
+    "idhm": 0.729
+  },
+  "3149309": {
+    "nome": "Pedro Leopoldo",
+    "idhm": 0.757
+  },
+  "3149408": {
+    "nome": "Pedro Teixeira",
+    "idhm": 0.637
+  },
+  "3149507": {
+    "nome": "Pequeri",
+    "idhm": 0.694
+  },
+  "3149606": {
+    "nome": "Pequi",
+    "idhm": 0.674
+  },
+  "3149705": {
+    "nome": "Perdigão",
+    "idhm": 0.703
+  },
+  "3149804": {
+    "nome": "Perdizes",
+    "idhm": 0.723
+  },
+  "3149903": {
+    "nome": "Perdões",
+    "idhm": 0.744
+  },
+  "3149952": {
+    "nome": "Periquito",
+    "idhm": 0.651
+  },
+  "3150000": {
+    "nome": "Pescador",
+    "idhm": 0.656
+  },
+  "3148608": {
+    "nome": "Peçanha",
+    "idhm": 0.627
+  },
+  "3150109": {
+    "nome": "Piau",
+    "idhm": 0.629
+  },
+  "3150158": {
+    "nome": "Piedade de Caratinga",
+    "idhm": 0.612
+  },
+  "3150208": {
+    "nome": "Piedade de Ponte Nova",
+    "idhm": 0.639
+  },
+  "3150307": {
+    "nome": "Piedade do Rio Grande",
+    "idhm": 0.678
+  },
+  "3150406": {
+    "nome": "Piedade dos Gerais",
+    "idhm": 0.626
+  },
+  "3150505": {
+    "nome": "Pimenta",
+    "idhm": 0.686
+  },
+  "3150539": {
+    "nome": "Pingo-d'Água",
+    "idhm": 0.619
+  },
+  "3150570": {
+    "nome": "Pintópolis",
+    "idhm": 0.594
+  },
+  "3150604": {
+    "nome": "Piracema",
+    "idhm": 0.646
+  },
+  "3150703": {
+    "nome": "Pirajuba",
+    "idhm": 0.723
+  },
+  "3150802": {
+    "nome": "Piranga",
+    "idhm": 0.6
+  },
+  "3151008": {
+    "nome": "Piranguinho",
+    "idhm": 0.717
+  },
+  "3150901": {
+    "nome": "Piranguçu",
+    "idhm": 0.685
+  },
+  "3151107": {
+    "nome": "Pirapetinga",
+    "idhm": 0.709
+  },
+  "3151206": {
+    "nome": "Pirapora",
+    "idhm": 0.731
+  },
+  "3151305": {
+    "nome": "Piraúba",
+    "idhm": 0.684
+  },
+  "3151404": {
+    "nome": "Pitangui",
+    "idhm": 0.725
+  },
+  "3151503": {
+    "nome": "Piumhi",
+    "idhm": 0.737
+  },
+  "3151602": {
+    "nome": "Planura",
+    "idhm": 0.712
+  },
+  "3151909": {
+    "nome": "Pocrane",
+    "idhm": 0.626
+  },
+  "3152006": {
+    "nome": "Pompéu",
+    "idhm": 0.689
+  },
+  "3152105": {
+    "nome": "Ponte Nova",
+    "idhm": 0.717
+  },
+  "3152131": {
+    "nome": "Ponto Chique",
+    "idhm": 0.606
+  },
+  "3152170": {
+    "nome": "Ponto dos Volantes",
+    "idhm": 0.595
+  },
+  "3152204": {
+    "nome": "Porteirinha",
+    "idhm": 0.651
+  },
+  "3152303": {
+    "nome": "Porto Firme",
+    "idhm": 0.634
+  },
+  "3152402": {
+    "nome": "Poté",
+    "idhm": 0.624
+  },
+  "3152501": {
+    "nome": "Pouso Alegre",
+    "idhm": 0.774
+  },
+  "3152600": {
+    "nome": "Pouso Alto",
+    "idhm": 0.71
+  },
+  "3151701": {
+    "nome": "Poço Fundo",
+    "idhm": 0.691
+  },
+  "3151800": {
+    "nome": "Poços de Caldas",
+    "idhm": 0.779
+  },
+  "3152709": {
+    "nome": "Prados",
+    "idhm": 0.689
+  },
+  "3152808": {
+    "nome": "Prata",
+    "idhm": 0.695
+  },
+  "3153004": {
+    "nome": "Pratinha",
+    "idhm": 0.721
+  },
+  "3152907": {
+    "nome": "Pratápolis",
+    "idhm": 0.729
+  },
+  "3153103": {
+    "nome": "Presidente Bernardes",
+    "idhm": 0.632
+  },
+  "3153202": {
+    "nome": "Presidente Juscelino",
+    "idhm": 0.614
+  },
+  "3153301": {
+    "nome": "Presidente Kubitschek",
+    "idhm": 0.595
+  },
+  "3153400": {
+    "nome": "Presidente Olegário",
+    "idhm": 0.701
+  },
+  "3153608": {
+    "nome": "Prudente de Morais",
+    "idhm": 0.69
+  },
+  "3153707": {
+    "nome": "Quartel Geral",
+    "idhm": 0.683
+  },
+  "3153806": {
+    "nome": "Queluzito",
+    "idhm": 0.682
+  },
+  "3153905": {
+    "nome": "Raposos",
+    "idhm": 0.73
+  },
+  "3154002": {
+    "nome": "Raul Soares",
+    "idhm": 0.655
+  },
+  "3154101": {
+    "nome": "Recreio",
+    "idhm": 0.692
+  },
+  "3154150": {
+    "nome": "Reduto",
+    "idhm": 0.629
+  },
+  "3154200": {
+    "nome": "Resende Costa",
+    "idhm": 0.685
+  },
+  "3154309": {
+    "nome": "Resplendor",
+    "idhm": 0.67
+  },
+  "3154408": {
+    "nome": "Ressaquinha",
+    "idhm": 0.683
+  },
+  "3154457": {
+    "nome": "Riachinho",
+    "idhm": 0.632
+  },
+  "3154507": {
+    "nome": "Riacho dos Machados",
+    "idhm": 0.627
+  },
+  "3154705": {
+    "nome": "Ribeirão Vermelho",
+    "idhm": 0.737
+  },
+  "3154606": {
+    "nome": "Ribeirão das Neves",
+    "idhm": 0.684
+  },
+  "3154804": {
+    "nome": "Rio Acima",
+    "idhm": 0.673
+  },
+  "3154903": {
+    "nome": "Rio Casca",
+    "idhm": 0.65
+  },
+  "3155009": {
+    "nome": "Rio Doce",
+    "idhm": 0.664
+  },
+  "3155207": {
+    "nome": "Rio Espera",
+    "idhm": 0.602
+  },
+  "3155306": {
+    "nome": "Rio Manso",
+    "idhm": 0.648
+  },
+  "3155405": {
+    "nome": "Rio Novo",
+    "idhm": 0.707
+  },
+  "3155504": {
+    "nome": "Rio Paranaíba",
+    "idhm": 0.709
+  },
+  "3155603": {
+    "nome": "Rio Pardo de Minas",
+    "idhm": 0.624
+  },
+  "3155702": {
+    "nome": "Rio Piracicaba",
+    "idhm": 0.685
+  },
+  "3155801": {
+    "nome": "Rio Pomba",
+    "idhm": 0.714
+  },
+  "3155900": {
+    "nome": "Rio Preto",
+    "idhm": 0.679
+  },
+  "3156007": {
+    "nome": "Rio Vermelho",
+    "idhm": 0.558
+  },
+  "3155108": {
+    "nome": "Rio do Prado",
+    "idhm": 0.605
+  },
+  "3156106": {
+    "nome": "Ritápolis",
+    "idhm": 0.653
+  },
+  "3156205": {
+    "nome": "Rochedo de Minas",
+    "idhm": 0.684
+  },
+  "3156304": {
+    "nome": "Rodeiro",
+    "idhm": 0.668
+  },
+  "3156403": {
+    "nome": "Romaria",
+    "idhm": 0.708
+  },
+  "3156452": {
+    "nome": "Rosário da Limeira",
+    "idhm": 0.662
+  },
+  "3156502": {
+    "nome": "Rubelita",
+    "idhm": 0.582
+  },
+  "3156601": {
+    "nome": "Rubim",
+    "idhm": 0.609
+  },
+  "3156700": {
+    "nome": "Sabará",
+    "idhm": 0.731
+  },
+  "3156809": {
+    "nome": "Sabinópolis",
+    "idhm": 0.638
+  },
+  "3156908": {
+    "nome": "Sacramento",
+    "idhm": 0.732
+  },
+  "3157005": {
+    "nome": "Salinas",
+    "idhm": 0.679
+  },
+  "3157104": {
+    "nome": "Salto da Divisa",
+    "idhm": 0.608
+  },
+  "3157203": {
+    "nome": "Santa Bárbara",
+    "idhm": 0.707
+  },
+  "3157252": {
+    "nome": "Santa Bárbara do Leste",
+    "idhm": 0.613
+  },
+  "3157278": {
+    "nome": "Santa Bárbara do Monte Verde",
+    "idhm": 0.606
+  },
+  "3157302": {
+    "nome": "Santa Bárbara do Tugúrio",
+    "idhm": 0.637
+  },
+  "3157336": {
+    "nome": "Santa Cruz de Minas",
+    "idhm": 0.706
+  },
+  "3157377": {
+    "nome": "Santa Cruz de Salinas",
+    "idhm": 0.577
+  },
+  "3157401": {
+    "nome": "Santa Cruz do Escalvado",
+    "idhm": 0.625
+  },
+  "3157500": {
+    "nome": "Santa Efigênia de Minas",
+    "idhm": 0.607
+  },
+  "3157609": {
+    "nome": "Santa Fé de Minas",
+    "idhm": 0.615
+  },
+  "3157658": {
+    "nome": "Santa Helena de Minas",
+    "idhm": 0.567
+  },
+  "3157708": {
+    "nome": "Santa Juliana",
+    "idhm": 0.706
+  },
+  "3157807": {
+    "nome": "Santa Luzia",
+    "idhm": 0.715
+  },
+  "3157906": {
+    "nome": "Santa Margarida",
+    "idhm": 0.61
+  },
+  "3158003": {
+    "nome": "Santa Maria de Itabira",
+    "idhm": 0.648
+  },
+  "3158102": {
+    "nome": "Santa Maria do Salto",
+    "idhm": 0.613
+  },
+  "3158201": {
+    "nome": "Santa Maria do Suaçuí",
+    "idhm": 0.64
+  },
+  "3159209": {
+    "nome": "Santa Rita de Caldas",
+    "idhm": 0.69
+  },
+  "3159407": {
+    "nome": "Santa Rita de Ibitipoca",
+    "idhm": 0.63
+  },
+  "3159308": {
+    "nome": "Santa Rita de Jacutinga",
+    "idhm": 0.682
+  },
+  "3159357": {
+    "nome": "Santa Rita de Minas",
+    "idhm": 0.613
+  },
+  "3159506": {
+    "nome": "Santa Rita do Itueto",
+    "idhm": 0.607
+  },
+  "3159605": {
+    "nome": "Santa Rita do Sapucaí",
+    "idhm": 0.721
+  },
+  "3159704": {
+    "nome": "Santa Rosa da Serra",
+    "idhm": 0.705
+  },
+  "3159803": {
+    "nome": "Santa Vitória",
+    "idhm": 0.71
+  },
+  "3158300": {
+    "nome": "Santana da Vargem",
+    "idhm": 0.698
+  },
+  "3158409": {
+    "nome": "Santana de Cataguases",
+    "idhm": 0.694
+  },
+  "3158508": {
+    "nome": "Santana de Pirapama",
+    "idhm": 0.628
+  },
+  "3158607": {
+    "nome": "Santana do Deserto",
+    "idhm": 0.651
+  },
+  "3158706": {
+    "nome": "Santana do Garambéu",
+    "idhm": 0.667
+  },
+  "3158805": {
+    "nome": "Santana do Jacaré",
+    "idhm": 0.647
+  },
+  "3158904": {
+    "nome": "Santana do Manhuaçu",
+    "idhm": 0.621
+  },
+  "3158953": {
+    "nome": "Santana do Paraíso",
+    "idhm": 0.685
+  },
+  "3159001": {
+    "nome": "Santana do Riacho",
+    "idhm": 0.665
+  },
+  "3159100": {
+    "nome": "Santana dos Montes",
+    "idhm": 0.647
+  },
+  "3159902": {
+    "nome": "Santo Antônio do Amparo",
+    "idhm": 0.672
+  },
+  "3160009": {
+    "nome": "Santo Antônio do Aventureiro",
+    "idhm": 0.671
+  },
+  "3160108": {
+    "nome": "Santo Antônio do Grama",
+    "idhm": 0.633
+  },
+  "3160207": {
+    "nome": "Santo Antônio do Itambé",
+    "idhm": 0.558
+  },
+  "3160306": {
+    "nome": "Santo Antônio do Jacinto",
+    "idhm": 0.574
+  },
+  "3160405": {
+    "nome": "Santo Antônio do Monte",
+    "idhm": 0.724
+  },
+  "3160454": {
+    "nome": "Santo Antônio do Retiro",
+    "idhm": 0.57
+  },
+  "3160504": {
+    "nome": "Santo Antônio do Rio Abaixo",
+    "idhm": 0.669
+  },
+  "3160603": {
+    "nome": "Santo Hipólito",
+    "idhm": 0.657
+  },
+  "3160702": {
+    "nome": "Santos Dumont",
+    "idhm": 0.741
+  },
+  "3165404": {
+    "nome": "Sapucaí-Mirim",
+    "idhm": 0.68
+  },
+  "3165503": {
+    "nome": "Sardoá",
+    "idhm": 0.636
+  },
+  "3165537": {
+    "nome": "Sarzedo",
+    "idhm": 0.734
+  },
+  "3165560": {
+    "nome": "Sem-Peixe",
+    "idhm": 0.654
+  },
+  "3165578": {
+    "nome": "Senador Amaral",
+    "idhm": 0.661
+  },
+  "3165602": {
+    "nome": "Senador Cortes",
+    "idhm": 0.674
+  },
+  "3165701": {
+    "nome": "Senador Firmino",
+    "idhm": 0.644
+  },
+  "3165800": {
+    "nome": "Senador José Bento",
+    "idhm": 0.684
+  },
+  "3165909": {
+    "nome": "Senador Modestino Gonçalves",
+    "idhm": 0.62
+  },
+  "3166006": {
+    "nome": "Senhora de Oliveira",
+    "idhm": 0.631
+  },
+  "3166105": {
+    "nome": "Senhora do Porto",
+    "idhm": 0.565
+  },
+  "3166204": {
+    "nome": "Senhora dos Remédios",
+    "idhm": 0.626
+  },
+  "3166303": {
+    "nome": "Sericita",
+    "idhm": 0.56
+  },
+  "3166402": {
+    "nome": "Seritinga",
+    "idhm": 0.66
+  },
+  "3166501": {
+    "nome": "Serra Azul de Minas",
+    "idhm": 0.557
+  },
+  "3166600": {
+    "nome": "Serra da Saudade",
+    "idhm": 0.677
+  },
+  "3166808": {
+    "nome": "Serra do Salitre",
+    "idhm": 0.696
+  },
+  "3166709": {
+    "nome": "Serra dos Aimorés",
+    "idhm": 0.651
+  },
+  "3166907": {
+    "nome": "Serrania",
+    "idhm": 0.677
+  },
+  "3167004": {
+    "nome": "Serranos",
+    "idhm": 0.643
+  },
+  "3166956": {
+    "nome": "Serranópolis de Minas",
+    "idhm": 0.633
+  },
+  "3167103": {
+    "nome": "Serro",
+    "idhm": 0.656
+  },
+  "3167202": {
+    "nome": "Sete Lagoas",
+    "idhm": 0.76
+  },
+  "3165552": {
+    "nome": "Setubinha",
+    "idhm": 0.542
+  },
+  "3167301": {
+    "nome": "Silveirânia",
+    "idhm": 0.652
+  },
+  "3167400": {
+    "nome": "Silvianópolis",
+    "idhm": 0.699
+  },
+  "3167608": {
+    "nome": "Simonésia",
+    "idhm": 0.632
+  },
+  "3167509": {
+    "nome": "Simão Pereira",
+    "idhm": 0.638
+  },
+  "3167707": {
+    "nome": "Sobrália",
+    "idhm": 0.631
+  },
+  "3167806": {
+    "nome": "Soledade de Minas",
+    "idhm": 0.697
+  },
+  "3160801": {
+    "nome": "São Bento Abade",
+    "idhm": 0.672
+  },
+  "3160900": {
+    "nome": "São Brás do Suaçuí",
+    "idhm": 0.664
+  },
+  "3160959": {
+    "nome": "São Domingos das Dores",
+    "idhm": 0.638
+  },
+  "3161007": {
+    "nome": "São Domingos do Prata",
+    "idhm": 0.69
+  },
+  "3161106": {
+    "nome": "São Francisco",
+    "idhm": 0.638
+  },
+  "3161205": {
+    "nome": "São Francisco de Paula",
+    "idhm": 0.66
+  },
+  "3161304": {
+    "nome": "São Francisco de Sales",
+    "idhm": 0.688
+  },
+  "3161403": {
+    "nome": "São Francisco do Glória",
+    "idhm": 0.663
+  },
+  "3161056": {
+    "nome": "São Félix de Minas",
+    "idhm": 0.62
+  },
+  "3161502": {
+    "nome": "São Geraldo",
+    "idhm": 0.651
+  },
+  "3161601": {
+    "nome": "São Geraldo da Piedade",
+    "idhm": 0.6
+  },
+  "3161650": {
+    "nome": "São Geraldo do Baixio",
+    "idhm": 0.63
+  },
+  "3161700": {
+    "nome": "São Gonçalo do Abaeté",
+    "idhm": 0.67
+  },
+  "3161809": {
+    "nome": "São Gonçalo do Pará",
+    "idhm": 0.689
+  },
+  "3161908": {
+    "nome": "São Gonçalo do Rio Abaixo",
+    "idhm": 0.667
+  },
+  "3125507": {
+    "nome": "São Gonçalo do Rio Preto",
+    "idhm": 0.64
+  },
+  "3162005": {
+    "nome": "São Gonçalo do Sapucaí",
+    "idhm": 0.715
+  },
+  "3162104": {
+    "nome": "São Gotardo",
+    "idhm": 0.736
+  },
+  "3162922": {
+    "nome": "São Joaquim de Bicas",
+    "idhm": 0.662
+  },
+  "3162948": {
+    "nome": "São José da Barra",
+    "idhm": 0.739
+  },
+  "3162955": {
+    "nome": "São José da Lapa",
+    "idhm": 0.729
+  },
+  "3163003": {
+    "nome": "São José da Safira",
+    "idhm": 0.583
+  },
+  "3163102": {
+    "nome": "São José da Varginha",
+    "idhm": 0.704
+  },
+  "3163201": {
+    "nome": "São José do Alegre",
+    "idhm": 0.717
+  },
+  "3163300": {
+    "nome": "São José do Divino",
+    "idhm": 0.658
+  },
+  "3163409": {
+    "nome": "São José do Goiabal",
+    "idhm": 0.666
+  },
+  "3163508": {
+    "nome": "São José do Jacuri",
+    "idhm": 0.566
+  },
+  "3163607": {
+    "nome": "São José do Mantimento",
+    "idhm": 0.657
+  },
+  "3162203": {
+    "nome": "São João Batista do Glória",
+    "idhm": 0.724
+  },
+  "3162807": {
+    "nome": "São João Evangelista",
+    "idhm": 0.638
+  },
+  "3162906": {
+    "nome": "São João Nepomuceno",
+    "idhm": 0.708
+  },
+  "3162252": {
+    "nome": "São João da Lagoa",
+    "idhm": 0.634
+  },
+  "3162302": {
+    "nome": "São João da Mata",
+    "idhm": 0.653
+  },
+  "3162401": {
+    "nome": "São João da Ponte",
+    "idhm": 0.569
+  },
+  "3162450": {
+    "nome": "São João das Missões",
+    "idhm": 0.529
+  },
+  "3162500": {
+    "nome": "São João del Rei",
+    "idhm": 0.758
+  },
+  "3162559": {
+    "nome": "São João do Manhuaçu",
+    "idhm": 0.65
+  },
+  "3162575": {
+    "nome": "São João do Manteninha",
+    "idhm": 0.64
+  },
+  "3162609": {
+    "nome": "São João do Oriente",
+    "idhm": 0.648
+  },
+  "3162658": {
+    "nome": "São João do Pacuí",
+    "idhm": 0.625
+  },
+  "3162708": {
+    "nome": "São João do Paraíso",
+    "idhm": 0.615
+  },
+  "3163706": {
+    "nome": "São Lourenço",
+    "idhm": 0.759
+  },
+  "3163805": {
+    "nome": "São Miguel do Anta",
+    "idhm": 0.644
+  },
+  "3163904": {
+    "nome": "São Pedro da União",
+    "idhm": 0.674
+  },
+  "3164100": {
+    "nome": "São Pedro do Suaçuí",
+    "idhm": 0.622
+  },
+  "3164001": {
+    "nome": "São Pedro dos Ferros",
+    "idhm": 0.659
+  },
+  "3164209": {
+    "nome": "São Romão",
+    "idhm": 0.64
+  },
+  "3164308": {
+    "nome": "São Roque de Minas",
+    "idhm": 0.672
+  },
+  "3164407": {
+    "nome": "São Sebastião da Bela Vista",
+    "idhm": 0.692
+  },
+  "3164431": {
+    "nome": "São Sebastião da Vargem Alegre",
+    "idhm": 0.66
+  },
+  "3164472": {
+    "nome": "São Sebastião do Anta",
+    "idhm": 0.607
+  },
+  "3164506": {
+    "nome": "São Sebastião do Maranhão",
+    "idhm": 0.581
+  },
+  "3164605": {
+    "nome": "São Sebastião do Oeste",
+    "idhm": 0.626
+  },
+  "3164704": {
+    "nome": "São Sebastião do Paraíso",
+    "idhm": 0.722
+  },
+  "3164803": {
+    "nome": "São Sebastião do Rio Preto",
+    "idhm": 0.632
+  },
+  "3164902": {
+    "nome": "São Sebastião do Rio Verde",
+    "idhm": 0.676
+  },
+  "3165206": {
+    "nome": "São Thomé das Letras",
+    "idhm": 0.667
+  },
+  "3165008": {
+    "nome": "São Tiago",
+    "idhm": 0.662
+  },
+  "3165107": {
+    "nome": "São Tomás de Aquino",
+    "idhm": 0.7
+  },
+  "3165305": {
+    "nome": "São Vicente de Minas",
+    "idhm": 0.715
+  },
+  "3167905": {
+    "nome": "Tabuleiro",
+    "idhm": 0.681
+  },
+  "3168002": {
+    "nome": "Taiobeiras",
+    "idhm": 0.67
+  },
+  "3168051": {
+    "nome": "Taparuba",
+    "idhm": 0.645
+  },
+  "3168101": {
+    "nome": "Tapira",
+    "idhm": 0.712
+  },
+  "3168200": {
+    "nome": "Tapiraí",
+    "idhm": 0.667
+  },
+  "3168309": {
+    "nome": "Taquaraçu de Minas",
+    "idhm": 0.651
+  },
+  "3168408": {
+    "nome": "Tarumirim",
+    "idhm": 0.633
+  },
+  "3168507": {
+    "nome": "Teixeiras",
+    "idhm": 0.675
+  },
+  "3168606": {
+    "nome": "Teófilo Otoni",
+    "idhm": 0.701
+  },
+  "3168705": {
+    "nome": "Timóteo",
+    "idhm": 0.77
+  },
+  "3168804": {
+    "nome": "Tiradentes",
+    "idhm": 0.74
+  },
+  "3168903": {
+    "nome": "Tiros",
+    "idhm": 0.683
+  },
+  "3169000": {
+    "nome": "Tocantins",
+    "idhm": 0.688
+  },
+  "3169059": {
+    "nome": "Tocos do Moji",
+    "idhm": 0.696
+  },
+  "3169109": {
+    "nome": "Toledo",
+    "idhm": 0.661
+  },
+  "3169208": {
+    "nome": "Tombos",
+    "idhm": 0.718
+  },
+  "3169307": {
+    "nome": "Três Corações",
+    "idhm": 0.744
+  },
+  "3169356": {
+    "nome": "Três Marias",
+    "idhm": 0.752
+  },
+  "3169406": {
+    "nome": "Três Pontas",
+    "idhm": 0.731
+  },
+  "3169505": {
+    "nome": "Tumiritinga",
+    "idhm": 0.626
+  },
+  "3169604": {
+    "nome": "Tupaciguara",
+    "idhm": 0.719
+  },
+  "3169703": {
+    "nome": "Turmalina",
+    "idhm": 0.682
+  },
+  "3169802": {
+    "nome": "Turvolândia",
+    "idhm": 0.696
+  },
+  "3170057": {
+    "nome": "Ubaporanga",
+    "idhm": 0.614
+  },
+  "3170008": {
+    "nome": "Ubaí",
+    "idhm": 0.609
+  },
+  "3170107": {
+    "nome": "Uberaba",
+    "idhm": 0.772
+  },
+  "3170206": {
+    "nome": "Uberlândia",
+    "idhm": 0.789
+  },
+  "3169901": {
+    "nome": "Ubá",
+    "idhm": 0.724
+  },
+  "3170305": {
+    "nome": "Umburatiba",
+    "idhm": 0.638
+  },
+  "3170404": {
+    "nome": "Unaí",
+    "idhm": 0.736
+  },
+  "3170438": {
+    "nome": "União de Minas",
+    "idhm": 0.672
+  },
+  "3170479": {
+    "nome": "Uruana de Minas",
+    "idhm": 0.664
+  },
+  "3170529": {
+    "nome": "Urucuia",
+    "idhm": 0.619
+  },
+  "3170503": {
+    "nome": "Urucânia",
+    "idhm": 0.633
+  },
+  "3170578": {
+    "nome": "Vargem Alegre",
+    "idhm": 0.631
+  },
+  "3170602": {
+    "nome": "Vargem Bonita",
+    "idhm": 0.696
+  },
+  "3170651": {
+    "nome": "Vargem Grande do Rio Pardo",
+    "idhm": 0.634
+  },
+  "3170701": {
+    "nome": "Varginha",
+    "idhm": 0.778
+  },
+  "3170750": {
+    "nome": "Varjão de Minas",
+    "idhm": 0.711
+  },
+  "3170909": {
+    "nome": "Varzelândia",
+    "idhm": 0.594
+  },
+  "3171006": {
+    "nome": "Vazante",
+    "idhm": 0.742
+  },
+  "3171030": {
+    "nome": "Verdelândia",
+    "idhm": 0.584
+  },
+  "3171071": {
+    "nome": "Veredinha",
+    "idhm": 0.632
+  },
+  "3171154": {
+    "nome": "Vermelho Novo",
+    "idhm": 0.612
+  },
+  "3171105": {
+    "nome": "Veríssimo",
+    "idhm": 0.667
+  },
+  "3171204": {
+    "nome": "Vespasiano",
+    "idhm": 0.688
+  },
+  "3171402": {
+    "nome": "Vieiras",
+    "idhm": 0.668
+  },
+  "3171600": {
+    "nome": "Virgem da Lapa",
+    "idhm": 0.61
+  },
+  "3171808": {
+    "nome": "Virginópolis",
+    "idhm": 0.675
+  },
+  "3171907": {
+    "nome": "Virgolândia",
+    "idhm": 0.62
+  },
+  "3171709": {
+    "nome": "Virgínia",
+    "idhm": 0.651
+  },
+  "3172004": {
+    "nome": "Visconde do Rio Branco",
+    "idhm": 0.709
+  },
+  "3171303": {
+    "nome": "Viçosa",
+    "idhm": 0.775
+  },
+  "3172103": {
+    "nome": "Volta Grande",
+    "idhm": 0.669
+  },
+  "3170800": {
+    "nome": "Várzea da Palma",
+    "idhm": 0.666
+  },
+  "3172202": {
+    "nome": "Wenceslau Braz",
+    "idhm": 0.678
+  },
+  "3100609": {
+    "nome": "Água Boa",
+    "idhm": 0.576
+  },
+  "3100708": {
+    "nome": "Água Comprida",
+    "idhm": 0.675
+  },
+  "3100906": {
+    "nome": "Águas Formosas",
+    "idhm": 0.645
+  },
+  "3101003": {
+    "nome": "Águas Vermelhas",
+    "idhm": 0.601
+  }
+}

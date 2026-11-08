@@ -1,0 +1,46 @@
+{
+  "status": "success",
+  "sincronizado_em": "07/11/2026 09:20:18",
+  "timestamp_iso": "2026-11-07T09:20:18.660381",
+  "origem": "Google Drive Oficial (Folder: Relatórios gestão 2019-2026)",
+  "folder_id": "1ZjyZ8i_1nnI5dVi8op7JIbDtksxMJ0dM",
+  "estatisticas": {
+    "total_municipios_mg": 853,
+    "municipios_com_biblioteca_publica": 460,
+    "municipios_sem_biblioteca_publica": 393,
+    "cobertura_publica_percentual": 53.93,
+    "populacao_total_mg": 20539989,
+    "populacao_com_publica": 17210174,
+    "populacao_sem_publica": 3329815,
+    "cobertura_populacional_percentual": 83.79,
+    "total_bibliotecas_publicas": 514,
+    "total_bibliotecas_comunitarias": 55,
+    "total_equipamentos_ativos": 569,
+    "total_polos_rede_integra_geraes": 24,
+    "decomposicao_sem_publica": {
+      "fechada_reforma": 4,
+      "declarado_sem_biblioteca": 2,
+      "sem_informacao_4_anos": 58,
+      "apenas_comunitaria": 5,
+      "sem_registro_historico": 324
+    },
+    "total_por_tipo": {
+      "Pública Municipal": 513,
+      "Estadual": 1,
+      "Comunitária": 55
+    },
+    "total_com_dac": 246,
+    "total_com_nmmb": 279,
+    "total_com_seil": 269,
+    "total_com_livros_pnld": 243,
+    "total_municipios_atendidos_acoes_2026": 270,
+    "total_municipios_atendidos_acoes_2025": 316,
+    "total_municipios_atendidos_acoes_2024": 271,
+    "total_municipios_atendidos_acoes_2023": 325,
+    "total_com_acoes_sistema_2026": 331,
+    "total_com_acoes_sistema_2025": 371,
+    "total_com_acoes_sistema_2024": 319,
+    "total_com_acoes_sistema_2023": 345,
+    "data_sincronizacao_drive": "2026-11-07T09:20:17.801294"
+  }
+}

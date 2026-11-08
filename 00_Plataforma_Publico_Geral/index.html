@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Mapa das Bibliotecas de Minas Gerais | Públicas e Comunitárias</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+  
+  <!-- Estilos da Aplicação -->
+  <link rel="stylesheet" href="css/styles.css?v=20261009_sync_zoom">
+  
+  <!-- Leaflet & Leaflet.markercluster (100% Local / Zero Custo / Sem CDN) -->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="vendor/leaflet/MarkerCluster.css">
+  <link rel="stylesheet" href="vendor/leaflet/MarkerCluster.Default.css">
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/leaflet/leaflet.markercluster.js"></script>
+
+  <!-- Configuração da API Central de Dados (Consumo 100% via HTTP fetch) -->
+  <script src="js/api_config.js?v=20261018_api"></script>
+</head>
+<body data-mode="publico">
+
+  <!-- =======================================================================
+       Cabeçalho Superior (Header)
+       ======================================================================= -->
+  <header class="app-header">
+    <div class="brand-section">
+      <button type="button" class="btn-header btn-toggle-sidebar" id="btn-toggle-sidebar" title="Recolher / Expandir Painel Lateral" aria-label="Menu Lateral">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div class="brand-icon minas-flag-icon" aria-hidden="true" title="Bandeira de Minas Gerais • Libertas Quæ Sera Tamen">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <polygon points="16,3 30,28 2,28" fill="#b91c1c" />
+          <g transform="translate(9, 13) scale(0.6)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="brand-titles">
+        <h1>Bibliotecas de Minas Gerais</h1>
+        <p>Sistema Estadual de Bibliotecas Públicas e<br>Comunitárias de Minas Gerais (SEBPC/MG)</p>
+      </div>
+    </div>
+
+    <!-- Painel de Indicadores de Cobertura e Rede -->
+    <div class="stats-strip" role="region" aria-label="Indicadores da Rede Estadual">
+      <!-- 1. Estadual (Lilás) -->
+      <div class="stat-pill estadual" id="pill-estadual" title="Biblioteca Pública Estadual de Minas Gerais (Praça da Liberdade - Belo Horizonte). Clique para localizar no mapa." style="cursor: pointer;">
+        <span class="metric-dot" aria-hidden="true"></span>
+        <svg class="stat-pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 2L2 7h20L12 2z"></path>
+        </svg>
+        <span class="metric-label">Estadual</span>
+        <span class="num" id="stat-estaduais">1</span>
+      </div>
+
+      <!-- 2. Públicas (Azul) -->
+      <div class="stat-pill publica" title="Municípios com Bibliotecas Públicas Ativas (502 municipais + 1 estadual)">
+        <span class="metric-dot" aria-hidden="true"></span>
+        <svg class="stat-pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span class="metric-label">Municipais</span>
+        <span class="num" id="stat-publicas">503</span>
+        <span class="sub" id="stat-mun-com-pub">(448 mun.)</span>
+      </div>
+
+      <!-- 3. Comunitárias (Verde) -->
+      <div class="stat-pill comunitaria" title="Bibliotecas Comunitárias (Sociedade Civil - Mantidas independentemente da rede pública)">
+        <span class="metric-dot" aria-hidden="true"></span>
+        <svg class="stat-pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span class="metric-label">Comunitárias</span>
+        <span class="num" id="stat-comunitarias">54</span>
+      </div>
+
+      <!-- 4. População (Teal) -->
+      <div class="stat-pill populacao" id="pill-populacao" title="Cobertura Populacional: 83,4% da população mineira reside em municípios com biblioteca pública ativa (Censo IBGE 2022: 17.128.362 de 20.539.989 habitantes)" style="cursor: pointer;">
+        <span class="metric-dot" aria-hidden="true"></span>
+        <svg class="stat-pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="7" r="4"></circle>
+          <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"></path>
+        </svg>
+        <span class="metric-label">População</span>
+        <span class="num" id="stat-populacao-cobertura">83.4%</span>
+        <span class="sub" id="stat-populacao-total">(17,1M hab.)</span>
+      </div>
+    </div>
+
+    <!-- Ações no Topo (Modo Público) -->
+    <div class="header-actions">
+
+
+      <!-- Botão Direto de Exportação em Excel para o Público -->
+      <button type="button" class="btn-header btn-export-excel-direct" id="btn-export-excel" title="Exportar dados das bibliotecas ativas exibidas em planilha Excel (.xlsx) formatada">
+        <span class="export-main-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="8" y1="13" x2="16" y2="13"></line>
+            <line x1="8" y1="17" x2="16" y2="17"></line>
+            <line x1="10" y1="9" x2="8" y2="9"></line>
+          </svg>
+        </span>
+        <span>Exportar</span>
+      </button>
+
+
+
+      <!-- Acesso Restrito à Equipe SEBPM -->
+      <a href="../00_Plataforma_Gestao/gestao.html" class="btn-header btn-header-restricted" title="Área restrita de gestão territorial e governança (SEBPM)">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span>Gestão</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       Layout Principal: Sidebar + Google Maps
+       ======================================================================= -->
+  <main class="main-layout">
+
+    <!-- Painel Lateral de Busca e Lista -->
+    <aside class="sidebar" id="sidebar">
+      
+      <!-- Seção de Busca e Filtros -->
+      <section class="search-filter-section">
+        <!-- Campo de Pesquisa Textual -->
+        <div class="search-input-box">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Buscar por município, nome, endereço, CEP..." 
+            autocomplete="off"
+            aria-label="Pesquisar biblioteca por município, nome, endereço ou CEP">
+          <button type="button" class="btn-clear-search" id="btn-clear-search" title="Limpar busca">✕</button>
+        </div>
+
+        <!-- Barra de Controle dos Filtros com Botão de Recolher/Expandir -->
+        <div class="filters-header-bar">
+          <button type="button" class="btn-toggle-filters" id="btn-toggle-filters" title="Recolher ou expandir filtros para dar mais espaço à lista de bibliotecas">
+            <span id="toggle-filters-icon">▾</span>
+            <span id="toggle-filters-text">Filtros & Programas</span>
+          </button>
+          <button type="button" class="btn-reset-filters" id="btn-reset-filters">
+            Limpar Filtros
+          </button>
+        </div>
+
+        <div class="filters-collapsible-body" id="filters-collapsible-body">
+          <!-- Menus Suspensos de Filtro: Região Intermediária e Tipo de Biblioteca -->
+          <div class="filter-dropdown-grid">
+            <div class="filter-group">
+              <label for="filter-region">🗺️ Região Intermediária</label>
+              <select id="filter-region" aria-label="Filtrar por Região Intermediária">
+                <option value="all">Todas as 13 Regiões</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="filter-type">📚 Tipo de Biblioteca</label>
+              <select id="filter-type" aria-label="Filtrar por Tipo de Biblioteca">
+                <option value="all">Todas as Ativas (568)</option>
+                <option value="Pública Municipal">📘 Públicas Municipais (512)</option>
+                <option value="Comunitária">👥 Comunitárias (55)</option>
+                <option value="Estadual">🏛️ Estadual (1)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Menu Suspenso de Seleção Única: Status BiblioBR -->
+          <div class="filter-group filter-group-bibliobr" style="margin-bottom: 0.65rem;">
+            <label for="select-status-bibliobr" title="Filtrar bibliotecas pelo status exclusivo de cadastro na plataforma nacional BiblioBR (MinC/SNBP)">
+              🏛️ Status BiblioBR (MinC / SNBP)
+            </label>
+            <select id="select-status-bibliobr" aria-label="Filtrar por Status no BiblioBR">
+              <option value="all">Todos os status BiblioBR</option>
+              <option value="cadastradas">🏛️ Cadastradas na BiblioBR (424)</option>
+              <option value="Aguardando análise">⏳ Aguardando análise (10)</option>
+              <option value="Aprovado">✅ Aprovado (179)</option>
+              <option value="Em análise Gestor Minc">🔍 Em análise Gestor MinC (3)</option>
+              <option value="Em diligência">⚠️ Em diligência (17)</option>
+              <option value="Indeferido">❌ Indeferido (20)</option>
+              <option value="Não iniciou o cadastro">⚪ Não iniciou o cadastro (145)</option>
+              <option value="Rascunho">📝 Rascunho (195)</option>
+            </select>
+          </div>
+
+          <!-- Toggles e Ações -->
+          <div class="filter-options-stack">
+
+            <div class="filter-option-row">
+              <label class="checkbox-label" title="Filtrar bibliotecas que receberam livros do PNLD+">
+                <input type="checkbox" id="check-pnld-only">
+                <span id="label-pnld-count">📚 Programa PNLD+ (229)</span>
+              </label>
+            </div>
+
+            <div class="filter-option-row">
+              <label class="checkbox-label" title="Filtrar bibliotecas participantes da Semana Estadual de Incentivo à Literatura (SEIL)">
+                <input type="checkbox" id="check-seil-only">
+                <span id="label-seil-count">📖 Semana da Literatura - SEIL (265)</span>
+              </label>
+            </div>
+
+            <div class="filter-option-row">
+              <label class="checkbox-label" title="Filtrar bibliotecas com Declaração de Acervos Culturais (DAC) deferida">
+                <input type="checkbox" id="check-dac-only">
+                <span id="label-dac-count">🏛️ Certificação DAC (242)</span>
+              </label>
+            </div>
+
+            <div class="filter-option-row">
+              <label class="checkbox-label" title="Filtrar bibliotecas participantes da Noite Mineira de Museus e Bibliotecas (NMMB)">
+                <input type="checkbox" id="check-nmmb-only">
+                <span id="label-nmmb-count">🌙 Noite Mineira (267)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Barra de Resumo e Ordenação -->
+      <div class="results-summary-bar">
+        <span id="results-count">Carregando bibliotecas...</span>
+        <div class="sort-select-wrapper">
+          <select id="select-sort-order" class="select-sort-order" title="Ordenar lista de municípios/bibliotecas">
+            <option value="alpha">A-Z (Alfabética)</option>
+            <option value="pop_desc">👥 Maior População (Censo 2022)</option>
+            <option value="pop_asc">👥 Menor População (Censo 2022)</option>
+          </select>
+        </div>
+        <button type="button" class="btn-clear-selection" id="btn-clear-selection" style="display: none;">
+          ✕ Desmarcar
+        </button>
+      </div>
+
+      <!-- Lista Dinâmica de Cards Compactos -->
+      <div class="library-cards-container" id="library-cards-list">
+        <!-- Injetado dinamicamente via app.js -->
+      </div>
+
+      <!-- Rodapé Institucional com Link Discreto para Equipe -->
+      <footer class="sidebar-restricted-footer">
+        <span style="font-size: 0.72rem; color: #64748b;">SEBPC/MG • Bibliotecas Públicas e Comunitárias</span>
+        <a href="../00_Plataforma_Gestao/gestao.html" class="sidebar-restricted-link" title="Acesso restrito para a coordenação do Sistema Estadual (SEBPC/MG)">
+          🔒 Área da Equipe
+        </a>
+      </footer>
+    </aside>
+
+    <!-- Área do Mapa (Google Maps) -->
+    <section class="map-container-wrapper">
+      
+      <!-- Container do Mapa -->
+      <div id="map"></div>
+
+      <!-- Indicador Flutuante de Zoom em Cidade com Botão de Voltar ao Mapa Geral -->
+      <div id="map-zoom-indicator" class="map-zoom-indicator" style="display: none;">
+        <span class="zoom-indicator-icon">📍</span>
+        <span id="zoom-indicator-text">Visualizando município</span>
+        <button type="button" id="btn-zoom-reset" class="btn-zoom-reset" title="Voltar para a visão geral de todo o estado de Minas Gerais">
+          ↩ Ver Minas Gerais Inteira
+        </button>
+      </div>
+
+      <!-- Botão Flutuante para Abrir/Fechar Painel de Camadas e Legenda -->
+      <div class="map-floating-controls-wrapper">
+        <button type="button" class="btn-floating-layers-toggle" id="btn-toggle-layers-panel">
+          <span>🗺️ Camadas & Legendas</span>
+          <span class="toggle-arrow" id="layers-panel-arrow">▾</span>
+        </button>
+
+        <!-- Painel Expansível de Camadas e Legendas -->
+        <div class="map-layers-panel" id="map-layers-panel">
+          <div class="layers-header">
+            <span>Camadas Territoriais</span>
+            <span style="font-size: 0.75rem; color: #64748b;">Ativar/Desativar</span>
+          </div>
+
+          <label class="layer-switch-item">
+            <span><span class="layer-color-dot" style="background: #0284c7;"></span>Marcadores (Livros)</span>
+            <input type="checkbox" id="layer-markers" checked>
+          </label>
+
+          <label class="layer-switch-item">
+            <span><span class="layer-color-dot" style="background: #94a3b8;"></span>Divisão Municipal (853 mun.)</span>
+            <input type="checkbox" id="layer-limits" checked>
+          </label>
+
+          <label class="layer-switch-item">
+            <span><span class="layer-color-dot" style="background: #7c3aed;"></span>Divisão Regional (13 Regiões)</span>
+            <input type="checkbox" id="layer-regional" checked>
+          </label>
+          <!-- Seletor de Mapa Base (Ocultado no mapa público conforme diretriz da coordenação) -->
+          <div style="display: none !important;">
+<!-- Seletor de Mapa Base -->
+          <div class="layers-header" style="margin-top: 0.75rem; padding-top: 0.45rem; border-top: 1px solid #e2e8f0;">
+            <span>Estilo do Mapa Base</span>
+          </div>
+          <div style="padding: 0.35rem 0.5rem 0.65rem 0.5rem;">
+            <select id="select-base-map" style="width: 100%; font-size: 0.78rem; padding: 0.4rem 0.6rem; border: 1px solid #cbd5e1; border-radius: 6px; background: #ffffff; color: #1e293b; font-weight: 600; cursor: pointer;">
+              <option value="esri" selected>🛣️ Esri Vias e Logradouros (Padrão)</option>
+              <option value="hot">🧡 OSM Humanitário (Vias Claras)</option>
+              <option value="satellite">🛰️ Satélite (Foto Aérea)</option>
+              <option value="topo">⛰️ Topográfico (Relevo)</option>
+              <option value="osm">🗺️ OpenStreetMap France</option>
+            </select>
+          </div>
+          </div>
+
+          <!-- Seção de Legendas Recolhível para Despoluir o Menu -->
+          <details class="legend-details-accordion" id="legend-details-accordion">
+            <summary class="legend-summary-title">ℹ️ Significado das Cores & Ícones</summary>
+            <div class="legend-block" id="legend-types-block">
+              <div class="legend-chips-row">
+                <span class="legend-dot-item"><span class="dot-sample publica"></span> 📘 Pública (Ativa)</span>
+                <span class="legend-dot-item"><span class="dot-sample comunitaria"></span> 👥 Comunitária (Ativa)</span>
+                <span class="legend-dot-item"><span class="dot-sample estadual"></span> 🏛️ Estadual (Ativa)</span>
+                <span class="legend-dot-item"><span class="dot-sample" style="background: #db2777; border: 1px solid #be185d;"></span> 📚 Acervo PNLD+</span>
+                <span class="legend-dot-item"><span class="dot-sample" style="background: #7c3aed; border: 1px solid #6d28d9;"></span> 📖 SEIL</span>
+                <span class="legend-dot-item"><span class="dot-sample" style="background: #ea580c; border: 1px solid #c2410c;"></span> 🏛️ DAC</span>
+                <span class="legend-dot-item"><span class="dot-sample" style="background: #facc15; border: 1px solid #ca8a04;"></span> 🌙 NMMB</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- Legenda 13 Regiões Intermediárias (Sempre exibida ao abrir) -->
+          <div class="legend-block" id="legend-regions-block" style="display: block;">
+            <div class="legend-title">13 Regiões Intermediárias (IBGE)</div>
+            <div class="legend-grid" id="regional-legend-grid">
+              <!-- Injetado dinamicamente via app.js -->
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão Flutuante de Centralização no Estado -->
+      <button type="button" class="btn-recenter-map" id="btn-recenter-map" title="Centralizar visualização em Minas Gerais">
+        📍 Visão Geral de MG
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Tooltip Flutuante Rico para Hover nos Cards da Sidebar -->
+  <div class="card-rich-hover-tooltip" id="card-rich-tooltip"></div>
+
+  <!-- =======================================================================
+       Modal de Ficha Cadastral Completa da Biblioteca
+       ======================================================================= -->
+  <!-- =======================================================================
+       Modal de Diagnóstico de Cobertura Populacional (Censo IBGE 2022)
+       ======================================================================= -->
+  <div class="modal-backdrop" id="populacao-modal" role="dialog" aria-modal="true" aria-labelledby="modal-populacao-title">
+    <div class="modal-card modal-populacao-card" style="max-width: 600px;">
+      <div class="modal-header" style="background: linear-gradient(to right, #f8fafc, #f1f5f9); border-bottom: 1px solid #e2e8f0; padding: 1.1rem 1.4rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 36px; height: 36px; border-radius: 8px; background: #e0f2fe; color: #0369a1; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+            👥
+          </div>
+          <div>
+            <h2 id="modal-populacao-title" style="font-size: 1.08rem; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.25;">
+              Diagnóstico de Cobertura Populacional
+            </h2>
+            <div style="font-size: 0.74rem; color: #64748b; font-weight: 500; margin-top: 2px;">
+              Censo Demográfico IBGE 2022 • Dados Oficiais do Estado de Minas Gerais
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-modal-close" title="Fechar modal" aria-label="Fechar modal">✕</button>
+      </div>
+      <div class="modal-body" id="modal-populacao-content" style="padding: 1.25rem; max-height: calc(85vh - 130px); overflow-y: auto;">
+        <!-- Injetado dinamicamente via app.js -->
+      </div>
+      <div class="modal-footer" style="padding: 0.85rem 1.4rem; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end; gap: 0.5rem;">
+        <button type="button" class="btn-header primary btn-modal-close" style="padding: 0.45rem 1.35rem; font-weight: 600;">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="details-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modal-library-title">Ficha da Biblioteca</h2>
+        <button type="button" class="btn-modal-close" title="Fechar">✕</button>
+      </div>
+      <div class="modal-body" id="modal-details-content">
+        <!-- Injetado dinamicamente via app.js -->
+      </div>
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-header primary" id="btn-modal-route">
+          🚗 Traçar Rota no Google Maps
+        </a>
+        <button type="button" class="btn-header btn-modal-close">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lógica da Aplicação -->
+  <script src="js/app.js?v=20261009_sync_fix"></script>
+
+</body>
+</html>

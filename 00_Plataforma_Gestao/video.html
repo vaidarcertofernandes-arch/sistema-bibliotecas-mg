@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeo Apresentação • Sistema Estadual de Bibliotecas de Minas Gerais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-gold: #d97706;
+      --accent-emerald: #059669;
+      --accent-blue: #0284c7;
+      --accent-rose: #e11d48;
+      --border-color: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #090e17;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-text p {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0369a1, #1d4ed8);
+      transform: translateY(-1px);
+    }
+
+    .btn-download {
+      background: linear-gradient(135deg, #059669, #047857);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+    }
+    .btn-download:hover {
+      background: linear-gradient(135deg, #047857, #065f46);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: #e2e8f0;
+    }
+    .btn-outline:hover {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    /* Container */
+    main {
+      flex: 1;
+      max-width: 1380px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.95));
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-title h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-title p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .badge-pill {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* Video Player Wrapper */
+    .player-section {
+      background: #000000;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      background: #000;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      outline: none;
+    }
+
+    /* Chapters Section */
+    .chapters-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .chapters-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.1rem;
+    }
+
+    .chapters-head h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chapters-head span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.85rem;
+    }
+
+    .chapter-btn {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .chapter-btn:hover {
+      background: #1e293b;
+      border-color: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    .chapter-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chapter-time {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: #1e293b;
+      color: #38bdf8;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    .chapter-scene {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    .chapter-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-top: 0.2rem;
+    }
+
+    .chapter-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border-color);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand-wrap">
+      <div class="brand-icon">📚</div>
+      <div class="brand-text">
+        <h1>Bibliotecas de Minas Gerais</h1>
+        <p>Sistema Estadual de Bibliotecas Públicas e Comunitárias (SEBPM / SECULT / SBMEC / DLLLB)</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="video_apresentacao_mapa_mg.mp4" download="Apresentacao_Mapa_Bibliotecas_MG.mp4" class="btn btn-download" title="Baixar vídeo em alta definição Full HD">
+        ⬇️ Baixar Vídeo MP4 (Full HD)
+      </a>
+      <a href="index.html" class="btn btn-primary" title="Abrir a aplicação interativa">
+        🗺️ Acessar Mapa Interativo
+      </a>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+
+    <!-- Banner Informativo -->
+    <section class="hero-banner">
+      <div class="hero-title">
+        <h2>Demonstração das Telas do Mapa Territorial de Minas Gerais</h2>
+        <p>Vídeo executivo apresentando as funcionalidades-chave, alcance nos territórios e histórico de políticas públicas.</p>
+      </div>
+      <div class="hero-badges">
+        <span class="badge-pill">📖 547 Bibliotecas</span>
+        <span class="badge-pill">🎓 Triênio 2024-2026</span>
+        <span class="badge-pill">📚 184 SEIL (Todas Edições)</span>
+        <span class="badge-pill">🌙 180 Noite Mineira</span>
+        <span class="badge-pill">📥 Exportação CSV</span>
+      </div>
+    </section>
+
+    <!-- Player de Vídeo -->
+    <section class="player-section">
+      <div class="video-wrapper">
+        <video id="demoVideo" controls autoplay muted loop playsinline preload="auto">
+          <source src="video_apresentacao_mapa_mg.mp4" type="video/mp4">
+          Seu navegador não suporta reprodução direta de vídeos MP4. Utilize o botão acima para fazer o download.
+        </video>
+      </div>
+    </section>
+
+    <!-- Navegação Interativa por Capítulos / Cenas -->
+    <section class="chapters-card">
+      <div class="chapters-head">
+        <h3>🎬 Navegação por Cenas (Clique para saltar no vídeo)</h3>
+        <span>Duração total: ~71 segundos (1 min 11s) • Resolução: 1080p (Full HD)</span>
+      </div>
+
+      <div class="chapters-grid">
+        <!-- Intro -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(0)">
+          <div class="chapter-top">
+            <span class="chapter-scene">ABERTURA</span>
+            <span class="chapter-time">00:00</span>
+          </div>
+          <div class="chapter-title">Apresentação Institucional</div>
+          <div class="chapter-desc">Métricas estratégicas: 547 bibliotecas ativas, 1.446 gestores e 184 na SEIL (todas edições).</div>
+        </button>
+
+        <!-- Cena 1 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(6.0)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 01</span>
+            <span class="chapter-time">00:06</span>
+          </div>
+          <div class="chapter-title">Visão Geral do Território Mineiro</div>
+          <div class="chapter-desc">547 bibliotecas ativas em 440 municípios e 100% das 13 Regiões Intermediárias cobertas.</div>
+        </button>
+
+        <!-- Cena 2 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(12.5)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 02</span>
+            <span class="chapter-time">00:12</span>
+          </div>
+          <div class="chapter-title">Tipologias & Marcadores (📖 / 📕)</div>
+          <div class="chapter-desc">Ícones de livros abertos para ativas e fechados para inativas, com divisão por tipologia.</div>
+        </button>
+
+        <!-- Cena 3 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(19.0)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 03</span>
+            <span class="chapter-time">00:19</span>
+          </div>
+          <div class="chapter-title">Fomento PNLD+ & Tooltip Rico</div>
+          <div class="chapter-desc">Filtro de 224 bibliotecas com 127.110 livros e diagnóstico instantâneo na barra lateral.</div>
+        </button>
+
+        <!-- Cena 4 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(25.5)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 04</span>
+            <span class="chapter-time">00:25</span>
+          </div>
+          <div class="chapter-title">Fotos Oficiais & InfoWindow</div>
+          <div class="chapter-desc">Fachada das unidades e resumo institucional das 4 políticas: Sistema, SEIL, DAC e NMMB.</div>
+        </button>
+
+        <!-- Cena 5 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(32.0)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 05</span>
+            <span class="chapter-time">00:32</span>
+          </div>
+          <div class="chapter-title">Dossiê: Dados Oficiais & Endereço</div>
+          <div class="chapter-desc">Ficha cadastral oficial, fotos, responsáveis, canais de contato e quantitativo do PNLD+.</div>
+        </button>
+
+        <!-- Cena 6 (Nova!) -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(38.5)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 06</span>
+            <span class="chapter-time">00:38</span>
+          </div>
+          <div class="chapter-title">Políticas Públicas Integradas</div>
+          <div class="chapter-desc">Histórico completo: Atuação do Sistema no Triênio, edições da SEIL e Noite Mineira.</div>
+        </button>
+
+        <!-- Cena 7 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(45.0)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 07</span>
+            <span class="chapter-time">00:45</span>
+          </div>
+          <div class="chapter-title">A Rede Fiel: Série Histórica Trienal</div>
+          <div class="chapter-desc">181 municípios atendidos continuamente em 2024, 2025 e 2026 (1.446 profissionais capacitados).</div>
+        </button>
+
+        <!-- Cena 8 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(51.5)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 08</span>
+            <span class="chapter-time">00:51</span>
+          </div>
+          <div class="chapter-title">Inteligência dos 853 Municípios</div>
+          <div class="chapter-desc">Camada coroplética de Cobertura Cultural revelando oportunidades de expansão da rede.</div>
+        </button>
+
+        <!-- Cena 9 -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(58.0)">
+          <div class="chapter-top">
+            <span class="chapter-scene">CENA 09</span>
+            <span class="chapter-time">00:58</span>
+          </div>
+          <div class="chapter-title">Gestão por Evidências & Exportação</div>
+          <div class="chapter-desc">Download em 1 clique de planilhas Excel/CSV com filtros dinâmicos para relatórios técnicos.</div>
+        </button>
+
+        <!-- Outro -->
+        <button type="button" class="chapter-btn" onclick="seekVideo(64.5)">
+          <div class="chapter-top">
+            <span class="chapter-scene">ENCERRAMENTO</span>
+            <span class="chapter-time">01:04</span>
+          </div>
+          <div class="chapter-title">Conclusão Institucional</div>
+          <div class="chapter-desc">Fortalecimento e articulação territorial da DLLLB / SBMEC / SECULT-MG em Minas Gerais.</div>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Secretaria de Estado de Cultura e Turismo de Minas Gerais (SECULT-MG) • Superintendência de Bibliotecas, Museus e Economia Criativa (SBMEC) • Diretoria do Livro, Leitura, Literatura e Bibliotecas (DLLLB)</p>
+    <p style="margin-top: 0.35rem;">Sistema de Informações Georreferenciadas das Bibliotecas Públicas e Comunitárias de Minas Gerais.</p>
+  </footer>
+
+  <script>
+    const video = document.getElementById('demoVideo');
+
+    function seekVideo(seconds) {
+      if (video) {
+        video.currentTime = seconds;
+        video.play();
+      }
+    }
+  </script>
+</body>
+</html>

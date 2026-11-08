@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Completo • Mapa Interativo das Bibliotecas de Minas Gerais (SEBPC/MG)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --primary: #0f172a;
+      --secult-blue: #0284c7;
+      --secult-dark-blue: #0369a1;
+      --secult-green: #15803d;
+      --secult-amber: #d97706;
+      --secult-red: #dc2626;
+      --secult-purple: #7c3aed;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-card: #f8fafc;
+      --border-card: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #cbd5e1;
+      color: var(--text-main);
+      line-height: 1.45;
+      font-size: 11px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Barra Superior de Ações na Tela */
+    .screen-actions-bar {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .screen-actions-bar .info-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .screen-actions-bar .actions-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .screen-actions-bar .btn-action {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .screen-actions-bar .btn-action:hover { background: #0369a1; }
+    .screen-actions-bar .btn-action.pdf { background: #15803d; }
+    .screen-actions-bar .btn-action.pdf:hover { background: #166534; }
+
+    /* Wrapper das Páginas A4 */
+    .doc-wrapper {
+      max-width: 210mm;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .page-a4 {
+      width: 210mm;
+      min-height: 297mm;
+      background: #ffffff;
+      padding: 14mm 16mm;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Cabeçalho da Folha */
+    .sheet-header {
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .sheet-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sheet-brand .logo-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .sheet-brand h1 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+    }
+
+    .sheet-brand .sub-inst {
+      font-size: 9.5px;
+      color: #0284c7;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sheet-brand .dep-inst {
+      font-size: 9px;
+      color: #64748b;
+    }
+
+    .sheet-badge-doc {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 4px 10px;
+      text-align: right;
+    }
+
+    .sheet-badge-doc .badge-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .sheet-badge-doc .badge-desc {
+      font-size: 8px;
+      color: #64748b;
+    }
+
+    /* Títulos e Seções */
+    .section-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      border-left: 3.5px solid #0284c7;
+      padding-left: 6px;
+      margin: 10px 0 6px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p {
+      margin-bottom: 7px;
+      line-height: 1.45;
+      text-align: justify;
+    }
+
+    /* Cards e Métricas */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+      margin: 8px 0;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 6px;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    .metric-card.blue { background: #eff6ff; border-color: #bfdbfe; }
+    .metric-card.green { background: #f0fdf4; border-color: #bbf7d0; }
+    .metric-card.amber { background: #fffbeb; border-color: #fde68a; }
+    .metric-card.purple { background: #faf5ff; border-color: #e9d5ff; }
+
+    .metric-card .label {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .metric-card .val {
+      font-size: 17px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+    .metric-card.blue .val { color: #0284c7; }
+    .metric-card.green .val { color: #15803d; }
+    .metric-card.amber .val { color: #d97706; }
+    .metric-card.purple .val { color: #7c3aed; }
+
+    .metric-card .sub {
+      font-size: 8px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    /* Tabelas */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9px;
+      margin: 7px 0 10px 0;
+    }
+
+    table.data-table th {
+      background: #f1f5f9;
+      color: #1e293b;
+      text-align: left;
+      padding: 5px 6px;
+      font-weight: 700;
+      border-bottom: 2px solid #cbd5e1;
+    }
+
+    table.data-table td {
+      padding: 4.5px 6px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+
+    table.data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .color-bullet {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    .callout {
+      background: #f8fafc;
+      border-left: 3.5px solid #0284c7;
+      padding: 7px 10px;
+      border-radius: 0 6px 6px 0;
+      margin: 8px 0;
+      font-size: 9.5px;
+      line-height: 1.4;
+    }
+    .callout.green { border-color: #15803d; background: #f0fdf4; }
+    .callout.amber { border-color: #d97706; background: #fffbeb; }
+
+    /* Roteiros dos Cruzamentos */
+    .cross-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 7px 10px;
+      margin-bottom: 8px;
+      background: #ffffff;
+    }
+    .cross-item.c1 { border-left: 4px solid #dc2626; }
+    .cross-item.c2 { border-left: 4px solid #ea580c; }
+    .cross-item.c3 { border-left: 4px solid #ca8a04; }
+    .cross-item.c4 { border-left: 4px solid #0284c7; }
+    .cross-item.c5 { border-left: 4px solid #15803d; }
+    .cross-item.c6 { border-left: 4px solid #7c3aed; }
+    .cross-item.c7 { border-left: 4px solid #0f172a; }
+
+    .cross-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+    .cross-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .cross-badge {
+      font-size: 8px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .cross-goal {
+      font-size: 8.8px;
+      color: #475569;
+      margin-bottom: 4px;
+    }
+    .cross-steps {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 8.5px;
+      line-height: 1.35;
+    }
+
+    /* Rodapé da Folha */
+    .sheet-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8px;
+      color: #94a3b8;
+    }
+    .sheet-footer .footer-left { font-weight: 600; color: #64748b; }
+    .sheet-footer .page-number { font-weight: 700; color: #0f172a; }
+
+    /* Impressão PDF */
+    @media print {
+      body { background: transparent; padding: 0; }
+      .screen-actions-bar { display: none !important; }
+      .doc-wrapper { margin: 0; gap: 0; }
+      .page-a4 {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+        height: 297mm;
+        max-height: 297mm;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Ações Superior -->
+  <div class="screen-actions-bar">
+    <div class="info-title">
+      <span>📘</span>
+      <span>Manual Completo de Uso e Guia de Cruzamentos Territoriais • SEBPC/MG</span>
+    </div>
+    <div class="actions-group">
+      <a href="manual_de_bolso.html" class="btn-action">📖 Ver Manual de Bolso</a>
+      <a href="gestao.html" class="btn-action">🗺️ Abrir Mapa</a>
+      <button onclick="window.print()" class="btn-action pdf">🖨️ Salvar como PDF / Imprimir</button>
+    </div>
+  </div>
+
+  <div class="doc-wrapper">
+
+    <!-- ===================================================================
+         PÁGINA 1: APRESENTAÇÃO, OBJETIVOS & DIAGNÓSTICO DOS 853 MUNICÍPIOS
+         =================================================================== -->
+    <div class="page-a4">
+      <div>
+        <header class="sheet-header">
+          <div class="sheet-brand">
+            <div class="logo-icon">🏛️</div>
+            <div>
+              <div class="sub-inst">Governo de Minas Gerais • Secretaria de Estado de Cultura e Turismo (SECULT-MG)</div>
+              <h1>Sistema Estadual de Bibliotecas Públicas e Comunitárias (SEBPC/MG)</h1>
+              <div class="dep-inst">Diretoria do Livro, Leitura, Literatura e Bibliotecas (DLLLB)</div>
+            </div>
+          </div>
+          <div class="sheet-badge-doc">
+            <div class="badge-title">MANUAL COMPLETO</div>
+            <div class="badge-desc">Edição Oficial • 853 Municípios</div>
+          </div>
+        </header>
+
+        <div class="section-title">
+          <span>APRESENTAÇÃO</span>
+        </div>
+        <p>
+          O <strong>Mapa Interativo das Bibliotecas de Minas Gerais</strong> é um produto de georreferenciamento, gestão orientada a dados e diagnóstico cultural do SEBPC/DLLLB/SBMEC/SECULT-MG. Concebido para embasar tomadas de decisão estratégica da Diretoria, subsidiar diálogos com prefeitos e secretários municipais e fornecer informações para o Fomento, a ferramenta unifica:
+        </p>
+        <ul style="margin-left: 18px; margin-bottom: 8px; font-size: 9.5px; line-height: 1.45;">
+          <li>O <strong>fechamento matemático integral dos 853 municípios de Minas Gerais</strong> (ativos + inativos);</li>
+          <li>A população oficial de cada cidade apurada pelo <strong>Censo Demográfico IBGE 2022</strong>;</li>
+          <li>A camada geoespacial de <strong>Bolhas de População (>20k hab.)</strong> nos vazios de atendimento público;</li>
+          <li>A governança descentralizada das <strong>Bibliotecas-Polo Regionais da Rede Integra Geraes</strong>;</li>
+          <li>As políticas de acervo e difusão: <strong>PNLD+ Bibliotecas</strong>, <strong>Noite Mineira (NMMB)</strong> e <strong>SEIL</strong>;</li>
+          <li>A série histórica quadrienal de <strong>Atuação do Sistema Estadual (2023–2026)</strong> para as Ações 4336 e 4337 do PPAG/SIGPLAN.</li>
+        </ul>
+
+        <div class="section-title">
+          <span>INDICADORES ESTRATÉGICOS OFICIAIS DE COBERTURA</span>
+          <span style="font-size: 8.5px; color: #64748b; font-weight: normal;">Consistência Territorial Absoluta</span>
+        </div>
+
+        <div class="metrics-row">
+          <div class="metric-card blue">
+            <div class="label">Municípios com BP</div>
+            <div class="val">460</div>
+            <div class="sub">53,93% dos 853 municípios</div>
+          </div>
+          <div class="metric-card green">
+            <div class="label">População Assistida</div>
+            <div class="val">83,8%</div>
+            <div class="sub">17.210.174 hab. (Censo '22)</div>
+          </div>
+          <div class="metric-card amber">
+            <div class="label">Municípios Desassistidos</div>
+            <div class="val">393</div>
+            <div class="sub">46,07% do território estadual</div>
+          </div>
+          <div class="metric-card purple">
+            <div class="label">Equipamentos Ativos</div>
+            <div class="val">569</div>
+            <div class="sub">514 Públicas + 55 Comunitárias</div>
+          </div>
+        </div>
+
+        <div class="callout green">
+          <strong>💡 Contraste Revelador — Cobertura Territorial vs. Cobertura Populacional:</strong><br>
+          Enquanto a cobertura municipal indica que 46,07% das cidades ainda não possuem biblioteca pública ativa, <strong>mais de 83,8% de toda a população mineira reside em cidades atendidas por biblioteca pública ativa</strong>. Os 393 municípios desassistidos reúnem apenas 16,2% dos habitantes de MG (perfil de pequenas cidades e áreas rurais, com média inferior a 8,7 mil hab./município).
+        </div>
+
+        <div class="section-title">
+          <span>TIPOLOGIA DOS EQUIPAMENTOS CULTURAIS CADASTRADOS</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Tipologia Oficial</th>
+              <th style="text-align: center;">Quantidade</th>
+              <th>Municípios</th>
+              <th>Padrão de Cor & Ícone</th>
+              <th>Descrição e Papel Institucional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pública Municipal</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #0284c7;">513</td>
+              <td>459</td>
+              <td><span class="color-bullet" style="background: #0284c7;"></span>🔵 Ponto Azul</td>
+              <td>Unidades mantidas pelas prefeituras para atendimento público gratuito universal.</td>
+            </tr>
+            <tr>
+              <td><strong>Pública Estadual</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #7c3aed;">1</td>
+              <td>1 (BH)</td>
+              <td><span class="color-bullet" style="background: #7c3aed;"></span>🟣 Ponto Roxo</td>
+              <td>Biblioteca Pública Estadual de Minas Gerais (Praça da Liberdade), centro do Sistema.</td>
+            </tr>
+            <tr>
+              <td><strong>Comunitária Ativa</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #15803d;">55</td>
+              <td>39</td>
+              <td><span class="color-bullet" style="background: #15803d;"></span>🟢 Ponto Verde</td>
+              <td>Geridas por coletivos e associações civis em bairros periféricos e distritos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="sheet-footer">
+        <div class="footer-left">Secretaria de Estado de Cultura e Turismo • SEBPC/MG</div>
+        <div>Manual Completo de Gestão e Operação Territorial</div>
+        <div class="page-number">Página 1 de 4</div>
+      </footer>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 2: DIAGNÓSTICO DOS DESASSISTIDOS & BOLHAS POPULACIONAIS
+         =================================================================== -->
+    <div class="page-a4">
+      <div>
+        <header class="sheet-header">
+          <div class="sheet-brand">
+            <div class="logo-icon">📊</div>
+            <div>
+              <div class="sub-inst">Diagnóstico Territorial Pormenorizado</div>
+              <h1>Decomposição dos 393 Municípios sem Biblioteca Pública</h1>
+              <div class="dep-inst">Relação Direta com os Subfiltros e a Camada Cartográfica de Bolhas Populacionais</div>
+            </div>
+          </div>
+          <div class="sheet-badge-doc">
+            <div class="badge-title">VINCULAÇÃO DIRETA</div>
+            <div class="badge-desc">Filtros & Malha do Mapa</div>
+          </div>
+        </header>
+
+        <div class="section-title">
+          <span>ESTRUTURA DOS 393 MUNICÍPIOS DESASSISTIDOS</span>
+        </div>
+        <p>
+          Para apoiar a tomada de decisão técnica do SEBPC/MG, os 393 municípios sem biblioteca pública ativa estão rigorosamente divididos em subcategorias de gestão:
+        </p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Situação Cadastral</th>
+              <th style="text-align: center;">Mun.</th>
+              <th style="text-align: center;">% MG</th>
+              <th>População '22</th>
+              <th>Marcador no Mapa</th>
+              <th>Diretriz de Política Pública</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sem Registro Histórico no SEBPC/MG</strong></td>
+              <td style="text-align: center; font-weight: 700;">324</td>
+              <td style="text-align: center;">38,0%</td>
+              <td>2.453.069 hab.</td>
+              <td>⚠️ Triângulo Amarelo / Cinza</td>
+              <td>Busca ativa, articulação com prefeituras, criação por lei e implantação inicial.</td>
+            </tr>
+            <tr>
+              <td><strong>Sem Dados Recentes (> 4 anos)</strong></td>
+              <td style="text-align: center; font-weight: 700;">58</td>
+              <td style="text-align: center;">6,8%</td>
+              <td>636.766 hab.</td>
+              <td>⚠️ Triângulo Amarelo / Laranja</td>
+              <td>Censo de revalidação cadastral junto aos novos secretários municipais.</td>
+            </tr>
+            <tr style="background: #fffbeb;">
+              <td><em>↳ Subtotal "Sem informação atualizada"</em></td>
+              <td style="text-align: center; font-weight: 800; color: #b45309;">382</td>
+              <td style="text-align: center; font-weight: 700;">44,8%</td>
+              <td style="font-weight: 700;">3.089.835 hab.</td>
+              <td colspan="2"><em>Subfiltro que reúne as cidades para ações de regularização e contato ativo.</em></td>
+            </tr>
+            <tr>
+              <td><strong>Biblioteca Fechada ou em Reforma</strong></td>
+              <td style="text-align: center; font-weight: 700;">4</td>
+              <td style="text-align: center;">0,5%</td>
+              <td>141.310 hab.</td>
+              <td>📕 Livro Vermelho Fechado</td>
+              <td>Apoio técnico à reabertura, mobiliário, recuperação predial e fomento.</td>
+            </tr>
+            <tr>
+              <td><strong>Declarado Oficialmente Sem Biblioteca</strong></td>
+              <td style="text-align: center; font-weight: 700;">2</td>
+              <td style="text-align: center;">0,2%</td>
+              <td>6.875 hab.</td>
+              <td>📕 Livro Vermelho Fechado</td>
+              <td>Pescador e São Geraldo da Piedade (municípios com registro de baixa/ausência de biblioteca ativa).</td>
+            </tr>
+            <tr style="background: #fef2f2;">
+              <td><em>↳ Subtotal "Fechada / Em Reforma"</em></td>
+              <td style="text-align: center; font-weight: 800; color: #dc2626;">6</td>
+              <td style="text-align: center; font-weight: 700;">0,7%</td>
+              <td style="font-weight: 700;">148.185 hab.</td>
+              <td colspan="2"><em>Cidades com infraestrutura e patrimônio já existente, prioritárias para reativação.</em></td>
+            </tr>
+            <tr>
+              <td><strong>Apenas Biblioteca Comunitária Ativa</strong></td>
+              <td style="text-align: center; font-weight: 700;">5</td>
+              <td style="text-align: center;">0,6%</td>
+              <td>91.795 hab.</td>
+              <td>📖 Marcador Lilás suave</td>
+              <td>Pirapora, Itapecerica, Aiuruoca, Laranjal e Simão Pereira.</td>
+            </tr>
+            <tr style="background: #f8fafc; font-weight: 800;">
+              <td>Total sem Biblioteca Pública Municipal</td>
+              <td style="text-align: center; color: #dc2626; font-size: 10px;">393</td>
+              <td style="text-align: center;">46,1%</td>
+              <td style="color: #dc2626;">3.329.815 hab.</td>
+              <td colspan="2">Fechamento: 460 com pública ativa + 393 desassistidos = 853 municípios de MG.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-title">
+          <span>CAMADA CARTOGRÁFICA DE BOLHAS DE POPULAÇÃO (≥ 20k hab.) E JUSTIFICATIVA TÉCNICA</span>
+        </div>
+        <p>
+          O mapa incorpora uma camada de <strong>círculos graduados translúcidos em vermelho</strong> sobre os municípios desassistidos que possuem <strong>20.000 habitantes ou mais</strong> (total de <strong>28 municípios</strong> no estado):
+        </p>
+        <div class="callout amber">
+          <strong>🎯 Racionalidade Técnica e Decisória do Corte em 20.000 Habitantes:</strong><br>
+          • <strong>Critério Oficial do IBGE / Estatuto da Cidade:</strong> 20 mil hab. é o marco federal que separa o Pequeno Porte I do Médio Porte e obriga a elaboração de Plano Diretor municipal.<br>
+          • <strong>Legibilidade Cartográfica:</strong> Evita poluir o mapa com centenas de bolhas em cidades pequenas (onde a média é inferior a 5 mil moradores), preservando a clareza em reuniões executivas.<br>
+          • <strong>Vácuo Populacional Crítico:</strong> Destaca onde o dano social é mais grave: cidades como <em>Coronel Fabriciano (105k)</em>, <em>Cataguases (66k)</em>, <em>Pirapora (56k)</em>, <em>Visconde do Rio Branco (39k)</em> e <em>Jaíba (38k)</em> somam <strong>mais de 900 mil pessoas</strong> sem biblioteca pública cadastrada.<br>
+          • <strong>Frente de Ataque Estratégica:</strong> Permite ao Governo de Minas atuar cirurgicamente nos 28 maiores gargalos demográficos, elevando a cobertura populacional do estado de 83,8% para mais de 88%.
+        </div>
+        <p>
+          <strong>Sincronia Estrita com os Filtros:</strong> A camada responde diretamente ao que o usuário seleciona:
+        </p>
+        <ul style="margin-left: 18px; font-size: 9px; line-height: 1.45;">
+          <li>No subfiltro <strong>🔥 > 20k hab.</strong>: exibe exatamente os círculos prioritários de MG.</li>
+          <li>No subfiltro <strong>📕 Fechada/Reforma</strong>: exibe a bolha de população apenas quando o município filtrado possui mais de 20 mil habitantes (neste recorte, <em>Coronel Fabriciano</em>, com 104,7 mil hab.), ocultando automaticamente as bolhas das demais categorias.</li>
+          <li>No subfiltro <strong>⚠️ Sem dados atualizados</strong>: exibe as cidades desse recorte com mais de 20k hab.</li>
+          <li>Ao selecionar uma <strong>Região Intermediária</strong> (ex.: Uberlândia), exibe apenas os vazios daquela região (ex.: <em>Santa Vitória e Tupaciguara</em>).</li>
+        </ul>
+      </div>
+
+      <footer class="sheet-footer">
+        <div class="footer-left">Secretaria de Estado de Cultura e Turismo • SEBPC/MG</div>
+        <div>Manual Completo de Gestão e Operação Territorial</div>
+        <div class="page-number">Página 2 de 4</div>
+      </footer>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 3: DADOS CADASTRAIS, PROCESSO SEI & ATUAÇÃO DO SISTEMA
+         =================================================================== -->
+    <div class="page-a4">
+      <div>
+        <header class="sheet-header">
+          <div class="sheet-brand">
+            <div class="logo-icon">🗂️</div>
+            <div>
+              <div class="sub-inst">Rastreabilidade e Inteligência Documental</div>
+              <h1>Processos SEI, Contatos e Atuação do Sistema Estadual</h1>
+              <div class="dep-inst">Fichas Modais Completas, Metadados Sincronizados e Métricas das Ações 4336/4337</div>
+            </div>
+          </div>
+          <div class="sheet-badge-doc">
+            <div class="badge-title">GESTÃO DOCUMENTAL</div>
+            <div class="badge-desc">Transparência & SEI-MG</div>
+          </div>
+        </header>
+
+        <div class="section-title">
+          <span>RASTREABILIDADE COM PROCESSO SEI OFICIAL & COLUNAS N, O, P</span>
+        </div>
+        <p>
+          Para assegurar que o mapa sirva como ferramenta diária de trabalho da equipe técnica do SEBPC/MG, cada ficha de biblioteca exibe diretamente:
+        </p>
+        <ul style="margin-left: 18px; margin-bottom: 8px; font-size: 9px; line-height: 1.45;">
+          <li><strong>Número do Processo SEI:</strong> Cada biblioteca possui o seu número de processo SEI cadastrado (ex.: <code>1410.01.0005141/2024-13</code>), permitindo localizar o histórico da biblioteca/município no Sistema de Bibliotecas.</li>
+          <li><strong>Responsável Local (Coluna N):</strong> Nome do coordenador ou bibliotecário encarregado da unidade no município.</li>
+          <li><strong>Telefone / WhatsApp (Coluna O):</strong> Contato direto para mobilização rápida e orientações técnicas.</li>
+          <li><strong>E-mail Institucional (Coluna P):</strong> Canal oficial de comunicação entre o SEBPC/MG e o município.</li>
+          <li><strong>Observações da Equipe:</strong> Campo destinado a anotações internas da equipe de atendimento do SEBPC/MG (ex.: <em>"Responsável: Cleide"</em>).</li>
+        </ul>
+
+        <div class="section-title">
+          <span>ATUAÇÃO DO SISTEMA ESTADUAL (2023–2026)</span>
+        </div>
+        <p>
+          A seção de atuação do Sistema Estadual nas fichas adota:
+        </p>
+        <div class="callout" style="border-color: #10b981; background: #ecfdf5;">
+          <strong>🎓 Nomenclatura Oficial Aprovada:</strong><br>
+          A ferramenta adota formalmente o termo <strong>"capacitações"</strong> (ao invés de capacitados), espelhando o formato de prestação de contas dos relatórios de gestão do SEBPC/MG.<br>
+          • <strong>Cabeçalho Consolidado:</strong> Exibe o somatório total acumulado no quadriênio: <strong><code>X capacitações • Y assessorias</code></strong> com o selo verde <em>Atendida no Quadriênio (2023–2026)</em>.<br>
+          • <strong>Linhas Anuais:</strong> Apresenta em uma única linha contínua os 4 exercícios: <strong><code>['23]</code></strong>, <strong><code>['24]</code></strong>, <strong><code>['25]</code></strong> e <strong><code>['26 (1ºS)]</code></strong>, destacando o volume de capacitações e assessorias recebidas em cada ano.
+        </div>
+
+        <div class="section-title">
+          <span>INTEGRAÇÃO COM PROGRAMAS E CERTIFICAÇÕES SETORIAIS</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Programa / Política</th>
+              <th style="text-align: center;">Unidades</th>
+              <th>Selo / Identificação</th>
+              <th>Impacto Institucional & Recursos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Programa PNLD+</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #0284c7;">243</td>
+              <td>📦 Lote de Acervo FNDE</td>
+              <td>Contempladas com remessas do FNDE/MEC (127.110 livros literários federais distribuídos).</td>
+            </tr>
+            <tr>
+              <td><strong>Declaração de Acervos Culturais (DAC)</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #ea580c;">246</td>
+              <td>🏛️ DAC Deferida</td>
+              <td>Acervos de memória reconhecidos pelo IEPHA/SECULT, gerando repasses financeiros aos municípios.</td>
+            </tr>
+            <tr>
+              <td><strong>Noite Mineira (NMMB)</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #d97706;">279</td>
+              <td>🌙 1ª a 18ª Edição</td>
+              <td>Bibliotecas participantes da programação noturna (filtro exclusivo para cada uma das 18 edições).</td>
+            </tr>
+            <tr>
+              <td><strong>Semana da Literatura (SEIL)</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #7c3aed;">269</td>
+              <td>📖 1ª a 6ª Edição</td>
+              <td>Circuito literário estadual (filtro interativo para cada uma das 6 edições).</td>
+            </tr>
+            <tr>
+              <td><strong>Status BiblioBR (MinC / SNBP)</strong></td>
+              <td style="text-align: center; font-weight: 700; color: #0f172a;">424 / 569</td>
+              <td>🏛️ Cadastro Nacional</td>
+              <td>Filtro oficial por status: Cadastradas (424), Aprovado (179), Rascunho (195), Em diligência (17), Aguardando análise (10), Indeferido (20), Gestor MinC (3) e Não iniciou o cadastro (145).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="sheet-footer">
+        <div class="footer-left">Secretaria de Estado de Cultura e Turismo • SEBPC/MG</div>
+        <div>Manual Completo de Gestão e Operação Territorial</div>
+        <div class="page-number">Página 3 de 4</div>
+      </footer>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 4: GUIA DOS 6 CRUZAMENTOS & OPERAÇÃO PRÁTICA
+         =================================================================== -->
+    <div class="page-a4">
+      <div>
+        <header class="sheet-header">
+          <div class="sheet-brand">
+            <div class="logo-icon">🧭</div>
+            <div>
+              <div class="sub-inst">Guia Operacional para Tomada de Decisão</div>
+              <h1>Os 6 Cruzamentos Estratégicos & Exportações</h1>
+              <div class="dep-inst">Roteiros Práticos Passo a Passo para Planejamento, Fomento e Apoio a Prefeituras</div>
+            </div>
+          </div>
+          <div class="sheet-badge-doc">
+            <div class="badge-title">ROTEIRO PRÁTICO</div>
+            <div class="badge-desc">Operação Ágil do SEBPC/MG</div>
+          </div>
+        </header>
+
+        <div class="cross-item c1">
+          <div class="cross-header">
+            <div class="cross-title">1. Priorização dos Grandes Vazios Populacionais (Bolhas > 20k hab.)</div>
+            <div class="cross-badge">Prioridade para o Fomento</div>
+          </div>
+          <div class="cross-goal">Identificar as cidades sem biblioteca onde a implantação causará maior impacto humano e social.</div>
+          <div class="cross-steps">
+            1. Marque <strong>[x] Exibir apenas sem biblioteca pública ativa</strong> ➔ Selecione o subfiltro <strong>🔥 > 20k hab. (28)</strong>.<br>
+            2. Ordene a lista por <strong>👥 Maior População</strong>. O mapa destacará os 28 círculos vermelhos (de Coronel Fabriciano a Barroso).<br>
+            3. Clique no botão <strong>📥 Exportar</strong> para gerar a lista dos municípios prioritários.
+          </div>
+        </div>
+
+        <div class="cross-item c2">
+          <div class="cross-header">
+            <div class="cross-title">2. Apoio Emergencial à Reabertura (Fechadas / Reforma — 6)</div>
+            <div class="cross-badge">Reativação Predial</div>
+          </div>
+          <div class="cross-goal">Auxiliar municípios que já contam com patrimônio, mas dependem de suporte para reabrir as portas.</div>
+          <div class="cross-steps">
+            1. Marque o subfiltro <strong>📕 Fechada/Reforma (6)</strong>.<br>
+            2. O mapa isolará os 6 municípios com ícone de livro fechado 📕 (<em>Coronel Fabriciano, Resplendor, Igaratinga, Rio Novo, Pescador e São Geraldo da Piedade</em>), destacando a bolha demográfica de grande porte em <em>Coronel Fabriciano (105k hab.)</em>.
+          </div>
+        </div>
+
+        <div class="cross-item c3">
+          <div class="cross-header">
+            <div class="cross-title">3. Mutirão Cadastral e Regularização por Lei (Sem informação atualizada — 382)</div>
+            <div class="cross-badge">Busca Ativa</div>
+          </div>
+          <div class="cross-goal">Planejar campanhas regionais de busca ativa e orientação para criação formal da biblioteca por lei municipal.</div>
+          <div class="cross-steps">
+            1. Marque o subfiltro <strong>⚠️ Sem informação atualizada (382)</strong>.<br>
+            2. No menu suspenso, filtre por <strong>Região Intermediária</strong> (ex.: <em>Teófilo Otoni</em> ou <em>Montes Claros</em>). O mapa exibirá os triângulos ⚠️ e as bolhas regionais.
+          </div>
+        </div>
+
+        <div class="cross-item c4">
+          <div class="cross-header">
+            <div class="cross-title">4. Núcleo Fiel do Sistema: Quadriênio Contínuo (2023–2026)</div>
+            <div class="cross-badge">Monitoramento PPAG</div>
+          </div>
+          <div class="cross-goal">Mapear bibliotecas com histórico consolidado e engajamento contínuo nas ações do SEBPC/MG.</div>
+          <div class="cross-steps">
+            1. Marque simultaneamente os filtros <strong>2026</strong>, <strong>2025</strong>, <strong>2024</strong> e <strong>2023 (345)</strong>.<br>
+            2. Os cards destacarão a insígnia unificada <strong>🎓 Sistema '23-'26</strong>, exibindo a ficha completa com as linhas anuais de capacitações e assessorias.
+          </div>
+        </div>
+
+        <div class="cross-item c5">
+          <div class="cross-header">
+            <div class="cross-title">5. Acompanhamento de Fomento Federal (Programa PNLD+ — 243 Bibliotecas)</div>
+            <div class="cross-badge">Supervisão de Acervos</div>
+          </div>
+          <div class="cross-goal">Fiscalizar o recebimento de acervos federais e apoiar o agendamento de visitas técnicas de campo.</div>
+          <div class="cross-steps">
+            1. Marque <strong>[x] Programa PNLD+ (243)</strong>. Os cards exibirão a quantidade exata de livros recebidos. Autodeclaração.<br>
+            2. Ao clicar na biblioteca, utilize o botão <strong>🚙 Traçar Rota no Google Maps</strong> para planejar roteiros logísticos de viagem.
+          </div>
+        </div>
+
+        <div class="cross-item c6">
+          <div class="cross-header">
+            <div class="cross-title">6. Governança Descentralizada: Rede Integra Geraes (24 Polos)</div>
+            <div class="cross-badge">Articulação Regional</div>
+          </div>
+          <div class="cross-goal">Acionar as Bibliotecas-Polo para multiplicar ações nas respectivas microrregiões.</div>
+          <div class="cross-steps">
+            1. Marque <strong>[x] Rede Integra Geraes - Polos (24)</strong>. As estrelas douradas indicarão os centros regionais de referência.
+          </div>
+        </div>
+
+        <div class="callout green" style="margin-top: 6px; margin-bottom: 0;">
+          <strong>📊 Exportações Disponíveis no Topo da Tela:</strong><br>
+          • <strong>Botão "📥 Exportar":</strong> Baixa a lista filtrada no formato Excel.<br>
+          • <strong>Botão "📊 Diagnóstico dos 853 Municípios":</strong> Gera a matriz cadastral completa dos 853 municípios de MG com todos os contatos e indicadores setoriais.
+        </div>
+      </div>
+
+      <footer class="sheet-footer">
+        <div class="footer-left">Sistema Estadual de Bibliotecas Públicas e Comunitárias (SEBPC/MG) • DLLLB / SBMEC / SECULT-MG</div>
+        <div>Contato Técnico: (31) 2128-8230 • sistemadebibliotecas@secult.mg.gov.br • Praça da Liberdade, Belo Horizonte</div>
+        <div class="page-number">Página 4 de 4</div>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+</html>
